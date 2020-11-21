@@ -36,6 +36,6 @@ jobs:
           echo test, and deploy your project.
       - uses: Azure/pipelines@v1
         with:
-          azure-devops-project-url: 'https://dev.azure.com/akiyaxiao0990/_git/Star%20Expert'
-          azure-pipeline-name: 'Star Expert' # name of the Azure pipeline to be triggered
+          azure-devops-project-url: 'https://dev.azure.com/akiyaxiao0990/Star%20Expert'
+          azure-pipeline-name: 'AkiyaX.StarExpert' # name of the Azure pipeline to be triggered
           azure-devops-token: '${{ secrets.AZURE_DEVOPS_TOKEN }}'
