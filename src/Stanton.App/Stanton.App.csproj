@@ -11,7 +11,7 @@
     <AssemblyName>Stanton.App</AssemblyName>
     <DefaultLanguage>zh-CN</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.18362.0</TargetPlatformVersion>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.19041.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
@@ -151,8 +151,25 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
-      <Version>6.2.10</Version>
+      <Version>6.2.11</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Stanton.Entity\Stanton.Entity.csproj">
+      <Project>{7358850e-8d65-4726-b720-f3d6e07cf6e1}</Project>
+      <Name>Stanton.Entity</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Stanton.Resource\Stanton.Resource.csproj">
+      <Project>{befc5114-c8e6-4273-a0d6-75ea38fe9bb7}</Project>
+      <Name>Stanton.Resource</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Stanton.Service\Stanton.Service.csproj">
+      <Project>{2f874774-553a-4a26-a72d-7b24f6811c53}</Project>
+      <Name>Stanton.Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
