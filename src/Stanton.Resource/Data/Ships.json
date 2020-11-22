@@ -1,0 +1,89 @@
+[
+    {
+        "Name": "Mercury Star Runner",
+        "Manufacturer": "Crusader Industries",
+        "Description": "The Mercury checks all the boxes expected of a dependable courier vessel, and then some. If you need it there fast and unscathed, you can’t do better than the Mercury. Built with the same engineering and design principals that has made Crusader the go-to manufacturer for galactic transport on any scale, the star runner chassis sets new standards for data and cargo conveyance.",
+        "Size": "Medium",
+        "Role": [
+            "Medium Cargo",
+            "Data Courier"
+        ],
+        "MinCrew": 2,
+        "MaxCrew": 3,
+        "CargoCapacity": 114,
+        "FlightReady": true,
+        "PledgePrice": 260,
+        "Availability": "Time-limited sales",
+        "Length": 40,
+        "Beam": 38,
+        "Height": 11.6,
+        "CombatSpeed": 215,
+        "MaxSpeed": 1286,
+        "Component": {
+            "PowerPlant": {
+                "Size": 2,
+                "Count": 2,
+                "Default": "Diligence"
+            },
+            "Coolers": {
+                "Size": 2,
+                "Count": 2,
+                "Default": "CoolCore"
+            },
+            "ShieldGenerators": {
+                "Size": 2,
+                "Count": 2,
+                "Default": "Aspis"
+            },
+            "QuantumDrive": {
+                "Size": 2,
+                "Count": 1,
+                "Default": "Bolon"
+            }
+        },
+        "Weaponry": {
+            "Weapons": [
+                {
+                    "Name": "Nose",
+                    "Size": 3,
+                    "Count": 1,
+                    "Mount": [
+                        "CF-337 Panther",
+                        "CF-337 Panther"
+                    ]
+                }
+            ],
+            "Turrets": [
+                {
+                    "Name": "Manned",
+                    "Size": 3,
+                    "Count": 2,
+                    "Mount": [
+                        "CF-337 Panther",
+                        "CF-337 Panther"
+                    ]
+                }
+            ],
+            "Missiles": [
+                {
+                    "Rack": "MSD-313",
+                    "Size": 3,
+                    "Count": 2,
+                    "Mount": [
+                        "Arrester III"
+                    ]
+                },
+                {
+                    "Rack": "MSD-322",
+                    "Size": 3,
+                    "Count": 2,
+                    "Mount": [
+                        "Tempest II",
+                        "Tempest II"
+                    ]
+                }
+            ]
+        },
+        "ModelUid": "a6af6d1ae2744a55820d00599aca71f2"
+    }
+]
