@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -7,6 +9,7 @@ using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -14,6 +17,9 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Serilog;
+using Stanton.Common.Util;
+using Stanton.Service;
 
 namespace Stanton.App
 {
@@ -30,6 +36,19 @@ namespace Stanton.App
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+            ConfigLogger();
+            new ShipManager().Test();
+        }
+
+        private void ConfigLogger()
+        {
+            string fileName = DateTime.Today.Date.ToString("yyyy_MM_dd") + ".log";
+            string filePath = Path.Combine(ApplicationData.Current.LocalCacheFolder.Path, "logs");
+            Log.Logger = new LoggerConfiguration()
+                .MinimumLevel.Debug()
+                .WriteTo.File(Path.Combine(filePath, fileName))
+                .CreateLogger();
+            Log.Information("Serilog config completed!");
         }
 
         /// <summary>
@@ -39,6 +58,7 @@ namespace Stanton.App
         /// <param name="e">有关启动请求和过程的详细信息。</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
+            
             Frame rootFrame = Window.Current.Content as Frame;
 
             // 不要在窗口已包含内容时重复应用程序初始化，

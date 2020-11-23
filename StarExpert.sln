@@ -7,11 +7,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{81B406D4-A7C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stanton.App", "src\Stanton.App\Stanton.App.csproj", "{3CF1A86C-4716-4AA1-8D4B-C36A590B2E49}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stanton.Entity", "src\Stanton.Entity\Stanton.Entity.csproj", "{7358850E-8D65-4726-B720-F3D6E07CF6E1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stanton.Common", "src\Stanton.Common\Stanton.Common.csproj", "{7358850E-8D65-4726-B720-F3D6E07CF6E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stanton.Service", "src\Stanton.Service\Stanton.Service.csproj", "{2F874774-553A-4A26-A72D-7B24F6811C53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stanton.Service", "src\Stanton.Service\Stanton.Service.csproj", "{2F874774-553A-4A26-A72D-7B24F6811C53}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stanton.Resource", "src\Stanton.Resource\Stanton.Resource.csproj", "{BEFC5114-C8E6-4273-A0D6-75EA38FE9BB7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stanton.Resource", "src\Stanton.Resource\Stanton.Resource.csproj", "{BEFC5114-C8E6-4273-A0D6-75EA38FE9BB7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
