@@ -163,6 +163,7 @@
   <ItemGroup>
     <PackageReference Include="FontAwesome.UWP">
       <Version>4.7.0.9</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection">
       <Version>5.0.0</Version>
     </PackageReference>
@@ -171,6 +172,7 @@
     </PackageReference>
     <PackageReference Include="Microsoft.UI.Xaml">
       <Version>2.4.3</Version>
+    </PackageReference>
     <PackageReference Include="Serilog">
       <Version>2.10.0</Version>
     </PackageReference>
