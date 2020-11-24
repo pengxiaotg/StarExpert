@@ -66,7 +66,7 @@
             ],
             "Missiles": [
                 {
-                    "Rack": "MSD-313",
+                    "Name": "MSD-313",
                     "Size": 3,
                     "Count": 2,
                     "Mount": [
@@ -74,7 +74,7 @@
                     ]
                 },
                 {
-                    "Rack": "MSD-322",
+                    "Name": "MSD-322",
                     "Size": 3,
                     "Count": 2,
                     "Mount": [

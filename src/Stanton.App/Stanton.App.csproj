@@ -133,8 +133,6 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\Icons\PowerPlants.svg" />
-    <Content Include="Assets\Images\StarCitizen.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -177,13 +175,9 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Stanton.Entity\Stanton.Entity.csproj">
+    <ProjectReference Include="..\Stanton.Common\Stanton.Common.csproj">
       <Project>{7358850e-8d65-4726-b720-f3d6e07cf6e1}</Project>
-      <Name>Stanton.Entity</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Stanton.Resource\Stanton.Resource.csproj">
-      <Project>{befc5114-c8e6-4273-a0d6-75ea38fe9bb7}</Project>
-      <Name>Stanton.Resource</Name>
+      <Name>Stanton.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\Stanton.Service\Stanton.Service.csproj">
       <Project>{2f874774-553a-4a26-a72d-7b24f6811c53}</Project>
