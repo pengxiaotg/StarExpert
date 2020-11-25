@@ -11,8 +11,8 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <Grid>
         <muxc:NavigationView 
-            x:Name="NavView">
-
+            x:Name="NavView"
+            IsTitleBarAutoPaddingEnabled="False">
             <muxc:NavigationView.PaneTitle>
                 Star Expert
             </muxc:NavigationView.PaneTitle>

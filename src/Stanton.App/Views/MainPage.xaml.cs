@@ -28,8 +28,6 @@ namespace Stanton.App.Views
     public sealed partial class MainPage : Page
     {
 
-
-
         public MainPage()
         {
             this.InitializeComponent();
@@ -37,7 +35,6 @@ namespace Stanton.App.Views
             {
                 Source = new Uri("https://sketchfab.com/models/a6af6d1ae2744a55820d00599aca71f2/embed?autostart=1&internal=1&ui_infos=0&ui_snapshots=1&ui_stop=0&ui_watermark=0")
             };
-            //this.Root.Children.Add(MyWebView);
         }
 
     }
