@@ -37,5 +37,9 @@ namespace Stanton.App.Views
             };
         }
 
+        private void NavigationFrame_Navigated(object sender, NavigationEventArgs e)
+        {
+            NavigationFrame.Navigate(typeof(SettingsPage));
+        }
     }
 }
