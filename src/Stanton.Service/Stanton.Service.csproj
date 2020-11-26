@@ -5,7 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Stanton.Entity\Stanton.Entity.csproj" />
+    <PackageReference Include="Serilog" Version="2.10.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Stanton.Resource\Stanton.Resource.csproj" />
   </ItemGroup>
 
