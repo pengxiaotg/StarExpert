@@ -1,0 +1,35 @@
+﻿<Page
+    x:Class="Stanton.App.Views.Detail.ShipDetail"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Stanton.App.Views.Detail"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    LayoutUpdated="Page_LayoutUpdated">
+
+    <GridView x:Name="rootView">
+        <GridView.Header>
+            <Grid>
+                <Image x:Name="Image" 
+                   Source="ms-appx:///Assets/images/Nothing.png"
+                   Width="Auto"/>
+                <FlipView x:Name="FlipView"
+                          Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                    <Image Source="ms-appx:///Assets/images/ship/Mercury Star Runner/1.jpeg" />
+                    <Image Source="ms-appx:///Assets/images/ship/Mercury Star Runner/2.jpeg"/>
+                    <Image Source="ms-appx:///Assets/images/ship/Mercury Star Runner/3.jpeg"/>
+                </FlipView>
+            </Grid>
+        </GridView.Header>
+
+        <StackPanel Spacing="10" x:Name="rootStack">
+            <Rectangle Height="100" Width="100" Fill="Green"/>
+            <Rectangle Height="100" Width="100" Fill="Yellow"/>
+            <Rectangle Height="100" Width="100" Fill="Blue"/>
+            <Rectangle Height="100" Width="100" Fill="Red"/>
+            <Rectangle Height="100" Width="100" Fill="Pink"/>
+        </StackPanel>
+    </GridView>
+</Page>

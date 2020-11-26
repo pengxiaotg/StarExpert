@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Stanton.App</RootNamespace>
     <AssemblyName>Stanton.App</AssemblyName>
-    <DefaultLanguage>zh-CN</DefaultLanguage>
+    <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.19041.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
@@ -123,6 +123,9 @@
     <Compile Include="Shell.xaml.cs">
       <DependentUpon>Shell.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Detail\ShipDetail.xaml.cs">
+      <DependentUpon>ShipDetail.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
@@ -140,6 +143,10 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\images\Nothing.png" />
+    <Content Include="Assets\images\ship\Mercury Star Runner\1.jpeg" />
+    <Content Include="Assets\images\ship\Mercury Star Runner\2.jpeg" />
+    <Content Include="Assets\images\ship\Mercury Star Runner\3.jpeg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -155,6 +162,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Page Include="Shell.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Detail\ShipDetail.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

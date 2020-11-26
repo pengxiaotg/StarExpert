@@ -18,7 +18,7 @@
             ItemInvoked="NavigationView_ItemInvoked"
             BackRequested="NavigationView_BackRequested">
             <muxc:NavigationView.PaneTitle>
-                Star Citizen
+                Star Expert
             </muxc:NavigationView.PaneTitle>
             <muxc:NavigationView.MenuItems>
                 <muxc:NavigationViewItem x:Name="HomeItem" 
@@ -27,7 +27,8 @@
                                          Tag="home"/>
                 <muxc:NavigationViewItemSeparator/>
 
-                <muxc:NavigationViewItem Content="Ships / Vehicles" >
+                <muxc:NavigationViewItem x:Name="ShipItem" 
+                                         Content="Ships / Vehicles" >
                     <muxc:NavigationViewItem.Icon>
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE709;"/>
                     </muxc:NavigationViewItem.Icon>
@@ -137,7 +138,7 @@
 
         <Border
             x:Name="TitleBarBorder"
-            Margin="40,0,0,0"
+            Margin="80,0,0,0"
             Padding="8,0,0,0"
             Height="40"
             VerticalAlignment="Top"
