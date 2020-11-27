@@ -1,17 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
+using Windows.UI.Composition;
+using Windows.UI.Xaml.Hosting;
+using System.Numerics;
 
 // https://go.microsoft.com/fwlink/?LinkId=234238 上介绍了“空白页”项模板
 
@@ -30,6 +22,42 @@ namespace Stanton.App.Views.Detail
         private void Page_LayoutUpdated(object sender, object e)
         {
             FlipView.Height = Image.ActualHeight;
+            
+            CompositionPropertySet scrollerPropertySet = ElementCompositionPreview.GetScrollViewerManipulationPropertySet(MainScrollViewer);
+            Compositor compositor = scrollerPropertySet.Compositor;
+
+            // Get the visual that represents our HeaderTextBlock 
+            // And define the progress animation string
+            var headerVisual = ElementCompositionPreview.GetElementVisual(ScrollHeader);
+            String progress = "Clamp(Abs(scroller.Translation.Y) / 100.0, 0.0, 1.0)";
+
+            // Create the expression and add in our progress string.
+            var textExpression = compositor.CreateExpressionAnimation("Lerp(1.5, 1, " + progress + ")");
+            textExpression.SetReferenceParameter("scroller", scrollerPropertySet);
+
+            var height = FlipView.ActualHeight - HeaderText.ActualHeight;
+            // Shift the header by 50 pixels when scrolling down
+            var offsetExpression = compositor.CreateExpressionAnimation($"-scroller.Translation.Y - {progress} * {height}");
+            offsetExpression.SetReferenceParameter("scroller", scrollerPropertySet);
+            headerVisual.StartAnimation("Offset.Y", offsetExpression);
+
+
+            Visual textVisual = ElementCompositionPreview.GetElementVisual(HeaderText);
+            Vector3 finalOffset = new Vector3(0, 0, 0);
+            var headerOffsetAnimation = compositor.CreateExpressionAnimation($"Lerp(Vector3(0,0,0), finalOffset, {progress})");
+            headerOffsetAnimation.SetReferenceParameter("scroller", scrollerPropertySet);
+            headerOffsetAnimation.SetVector3Parameter("finalOffset", finalOffset);
+            textVisual.StartAnimation(nameof(Visual.Offset), headerOffsetAnimation);
+
+            var opacityExpression = compositor.CreateExpressionAnimation($"{progress} * 0.8");
+            opacityExpression.SetReferenceParameter("scroller", scrollerPropertySet);
+            textVisual.StartAnimation("opacity", opacityExpression);
+
+        }
+
+        private void Page_Loaded(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -6,9 +6,49 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    Loaded="Page_Loaded">
 
-    <Grid>
-        <TextBlock>Home</TextBlock>
-    </Grid>
+    <ScrollViewer x:Name="MainScrollViewer" >
+
+        <Grid x:Name="MainContentsGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Grid x:Name="MainContents" Grid.Row="1" >
+                <StackPanel>
+                    <Rectangle Fill="#DAECF4" Height="200" />
+                    <Rectangle Fill="#91C5DD" Height="200" />
+                    <Rectangle Fill="#DAECF4" Height="200" />
+                    <Rectangle Fill="#91C5DD" Height="200" />
+                    <Rectangle Fill="#DAECF4" Height="200" />
+                    <Rectangle Fill="#91C5DD" Height="200" />
+                    <Rectangle Fill="#DAECF4" Height="200" />
+                    <Rectangle Fill="#91C5DD" Height="200" />
+                    <Rectangle Fill="#DAECF4" Height="200" />
+                    <Rectangle Fill="#91C5DD" Height="200" />
+                </StackPanel>
+            </Grid>
+
+            <Grid x:Name="ScrollHeader">
+                <StackPanel Orientation="Horizontal" Background="#2D2D30">
+                    <Border
+                    x:Name="HeaderLogo"
+                    Width="100" Height="100"
+                    BorderThickness="10" >
+                        <Ellipse Fill="Red" />
+                    </Border>
+
+                    <StackPanel VerticalAlignment="Center" >
+                        <TextBlock 
+                    x:Name="HeaderText" FontSize="25" 
+                    Text="Sticky Header" Foreground="#FFFFFF"/>
+                    </StackPanel>
+                </StackPanel>
+            </Grid>
+
+        </Grid>
+    </ScrollViewer>
 </Page>

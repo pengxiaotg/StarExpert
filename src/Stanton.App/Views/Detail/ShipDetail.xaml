@@ -7,29 +7,55 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    Loaded="Page_Loaded"
     LayoutUpdated="Page_LayoutUpdated">
 
-    <GridView x:Name="rootView">
-        <GridView.Header>
+    <ScrollViewer x:Name="MainScrollViewer" >
+
+        <Grid x:Name="MainContentsGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Grid x:Name="MainContents" Grid.Row="1" >
+                <StackPanel>
+                    <Rectangle Fill="#DAECF4" Height="200" />
+                    <Rectangle Fill="#91C5DD" Height="200" />
+                    <Rectangle Fill="#DAECF4" Height="200" />
+                    <Rectangle Fill="#91C5DD" Height="200" />
+                    <Rectangle Fill="#DAECF4" Height="200" />
+                    <Rectangle Fill="#91C5DD" Height="200" />
+                    <Rectangle Fill="#DAECF4" Height="200" />
+                    <Rectangle Fill="#91C5DD" Height="200" />
+                    <Rectangle Fill="#DAECF4" Height="200" />
+                    <Rectangle Fill="#91C5DD" Height="200" />
+                </StackPanel>
+            </Grid>
+
             <Grid>
                 <Image x:Name="Image" 
-                   Source="ms-appx:///Assets/images/Nothing.png"
-                   Width="Auto"/>
+                            Source="ms-appx:///Assets/images/Nothing.png"
+                            Width="Auto"/>
                 <FlipView x:Name="FlipView"
-                          Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                        Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
                     <Image Source="ms-appx:///Assets/images/ship/Mercury Star Runner/1.jpeg" />
                     <Image Source="ms-appx:///Assets/images/ship/Mercury Star Runner/2.jpeg"/>
                     <Image Source="ms-appx:///Assets/images/ship/Mercury Star Runner/3.jpeg"/>
                 </FlipView>
+                <Grid x:Name="ScrollHeader">
+                    <StackPanel VerticalAlignment="Bottom">
+                        <Grid>
+                            <Rectangle x:Name="HeaderText" Fill="{ThemeResource ApplicationPageBackgroundThemeBrush}"/>
+                            <TextBlock Text="Mercury Star Runner"
+                                       Padding="24,12,24,12"
+                                       FontSize="48" FontWeight="Bold"/>
+                        </Grid>
+                    </StackPanel>
+                </Grid>
             </Grid>
-        </GridView.Header>
 
-        <StackPanel Spacing="10" x:Name="rootStack">
-            <Rectangle Height="100" Width="100" Fill="Green"/>
-            <Rectangle Height="100" Width="100" Fill="Yellow"/>
-            <Rectangle Height="100" Width="100" Fill="Blue"/>
-            <Rectangle Height="100" Width="100" Fill="Red"/>
-            <Rectangle Height="100" Width="100" Fill="Pink"/>
-        </StackPanel>
-    </GridView>
+        </Grid>
+    </ScrollViewer>
+
 </Page>

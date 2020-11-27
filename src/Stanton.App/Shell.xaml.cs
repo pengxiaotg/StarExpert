@@ -18,14 +18,16 @@ using NavigationViewItem = Microsoft.UI.Xaml.Controls.NavigationViewItem;
 using NavigationViewBackRequestedEventArgs = Microsoft.UI.Xaml.Controls.NavigationViewBackRequestedEventArgs;
 using NavigationViewItemInvokedEventArgs = Microsoft.UI.Xaml.Controls.NavigationViewItemInvokedEventArgs;
 using Stanton.App.Views.Detail;
+using System.ComponentModel;
 
 #nullable enable
 
 namespace Stanton.App
 {
-    public sealed partial class Shell : UserControl
+    public sealed partial class Shell : Page
     {
         private readonly IReadOnlyCollection<NavEntry> NavigationItems;
+
 
         public Shell()
         {
