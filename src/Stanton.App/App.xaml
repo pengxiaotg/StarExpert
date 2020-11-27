@@ -8,6 +8,12 @@
             <ResourceDictionary.MergedDictionaries>
                 <XamlControlsResources  xmlns="using:Microsoft.UI.Xaml.Controls" />
             </ResourceDictionary.MergedDictionaries>
+            <AcrylicBrush x:Key="NavigationViewDefaultPaneBackground"
+                  BackgroundSource="Backdrop" TintColor="{ThemeResource SystemChromeMediumColor}" TintOpacity=".5"/>
+            <AcrylicBrush x:Key="NavigationViewTopPaneBackground"
+                  BackgroundSource="Backdrop" TintColor="{ThemeResource SystemChromeMediumColor}" TintOpacity=".5"/>
+            <AcrylicBrush x:Key="NavigationViewExpandedPaneBackground"
+                  BackgroundSource="HostBackdrop" TintColor="{ThemeResource SystemChromeMediumColor}" TintOpacity=".7"/>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
