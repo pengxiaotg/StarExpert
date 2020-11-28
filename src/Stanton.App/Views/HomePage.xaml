@@ -25,6 +25,7 @@
                     <TextBlock Style="{StaticResource TitleTextBlockStyle}"> 
                             Description
                     </TextBlock>
+                    <PathIcon Data="{StaticResource PowerPlantIcon}"/>
                     <TextBlock TextWrapping="Wrap" Style="{StaticResource  BaseTextBlockStyle}">
                             The Mercury Star Runner is a courier ship by Crusader Industries that is focused on quickly and discreetly delivering small payloads of goods or data. With features such as dedicated data storage computers and "smugglers' holds", the mercury made a name for itself delivering crucial information into the right hands.
                     </TextBlock>
@@ -61,12 +62,9 @@
                                     <TextBlock Style="{StaticResource CaptionTextBlockStyle}">
                                         Production state
                                     </TextBlock>
-                                    <StackPanel Orientation="Horizontal">
-                                        <TextBlock Style="{StaticResource BaseTextBlockStyle}">
+                                    <TextBlock Style="{StaticResource BaseTextBlockStyle}">
                                             Flight Ready ✅
-                                        </TextBlock>
-
-                                    </StackPanel>
+                                    </TextBlock>
 
                                 </StackPanel>
                                 <StackPanel>
