@@ -20,22 +20,22 @@
             <TextBlock Text="Mercury Star Runner"
                        Padding="24,12,24,12"
                        FontSize="48" FontWeight="Bold"/>
-            <StackPanel Margin="24,12,24,12">
-                <StackPanel Spacing="12">
+            <StackPanel>
+                <StackPanel Spacing="12" Margin="24,0,24,0">
                     <TextBlock Style="{StaticResource TitleTextBlockStyle}"> 
                             Description
                     </TextBlock>
-                    <PathIcon Data="{StaticResource PowerPlantIcon}"/>
                     <TextBlock TextWrapping="Wrap" Style="{StaticResource  BaseTextBlockStyle}">
                             The Mercury Star Runner is a courier ship by Crusader Industries that is focused on quickly and discreetly delivering small payloads of goods or data. With features such as dedicated data storage computers and "smugglers' holds", the mercury made a name for itself delivering crucial information into the right hands.
                     </TextBlock>
                 </StackPanel>
                 <GridView x:Name="GridView" 
                           IsItemClickEnabled="False"
-                          SizeChanged="GridView_SizeChanged">
+                          SizeChanged="GridView_SizeChanged"
+                          Margin="12,0,24,0">
                     <GridView.ItemContainerStyle>
                         <Style TargetType="GridViewItem">
-                            <Setter Property="Margin" Value="0,12,12,0"/>
+                            <Setter Property="Margin" Value="12,12,0,0"/>
                             <Setter Property="Padding" Value="12,12,12,12"/>
                             <Setter Property="BorderThickness" Value="1"/>
                             <Setter Property="BorderBrush" Value="{ThemeResource SystemAccentColor}"/>
@@ -265,21 +265,32 @@
                         </ScrollViewer>
                     </GridViewItem>
                 </GridView>
-                <Grid x:Name="MainContents" >
-                    <StackPanel>
-                        <Rectangle Fill="#DAECF4" Height="200" />
-                        <Rectangle Fill="#91C5DD" Height="200" />
-                        <Rectangle Fill="#DAECF4" Height="200" />
-                        <Rectangle Fill="#91C5DD" Height="200" />
-                        <Rectangle Fill="#DAECF4" Height="200" />
-                        <Rectangle Fill="#91C5DD" Height="200" />
-                        <Rectangle Fill="#DAECF4" Height="200" />
-                        <Rectangle Fill="#91C5DD" Height="200" />
-                        <Rectangle Fill="#DAECF4" Height="200" />
-                        <Rectangle Fill="#91C5DD" Height="200" />
-                    </StackPanel>
-                </Grid>
+                <Pivot Margin="14,0,24,0">
+                    <PivotItem Header="Avionics &amp; Systems">
+                        <TextBlock Text="all emails go here." />
+                    </PivotItem>
+                    <PivotItem Header="Propulsion">
+                        <TextBlock Text="unread emails go here." />
+                    </PivotItem>
+                    <PivotItem Header="Weaponry">
+                        <TextBlock Text="flagged emails go here." />
+                    </PivotItem>
+                </Pivot>
             </StackPanel>
+            <Grid x:Name="MainContents" >
+                <StackPanel>
+                    <Rectangle Fill="#DAECF4" Height="200" />
+                    <Rectangle Fill="#91C5DD" Height="200" />
+                    <Rectangle Fill="#DAECF4" Height="200" />
+                    <Rectangle Fill="#91C5DD" Height="200" />
+                    <Rectangle Fill="#DAECF4" Height="200" />
+                    <Rectangle Fill="#91C5DD" Height="200" />
+                    <Rectangle Fill="#DAECF4" Height="200" />
+                    <Rectangle Fill="#91C5DD" Height="200" />
+                    <Rectangle Fill="#DAECF4" Height="200" />
+                    <Rectangle Fill="#91C5DD" Height="200" />
+                </StackPanel>
+            </Grid>
         </StackPanel>
     </ScrollViewer>
 </Page>
