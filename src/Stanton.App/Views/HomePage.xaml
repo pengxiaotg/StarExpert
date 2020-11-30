@@ -9,12 +9,6 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
     LayoutUpdated="Page_LayoutUpdated">
 
-    <Page.Resources>
-        <Style TargetType="TextBlock">
-            <Setter Property="FontSize" Value="24"/>
-        </Style>
-    </Page.Resources>
-
     <ScrollViewer x:Name="MainScrollViewer" >
         <StackPanel Spacing="12">
             <TextBlock Text="Mercury Star Runner"
@@ -25,7 +19,7 @@
                     <TextBlock Style="{StaticResource TitleTextBlockStyle}"> 
                             Description
                     </TextBlock>
-                    <TextBlock TextWrapping="Wrap" Style="{StaticResource  BaseTextBlockStyle}">
+                    <TextBlock TextWrapping="Wrap">
                             The Mercury Star Runner is a courier ship by Crusader Industries that is focused on quickly and discreetly delivering small payloads of goods or data. With features such as dedicated data storage computers and "smugglers' holds", the mercury made a name for itself delivering crucial information into the right hands.
                     </TextBlock>
                 </StackPanel>
@@ -266,11 +260,115 @@
                     </GridViewItem>
                 </GridView>
                 <Pivot Margin="14,0,24,0">
+                    <Pivot.ItemContainerStyle>
+                        <Style TargetType="PivotItem">
+                            <Setter Property="Margin" Value="12,12,12,12"/>
+                        </Style>
+                    </Pivot.ItemContainerStyle>
                     <PivotItem Header="Avionics &amp; Systems">
-                        <TextBlock Text="all emails go here." />
+                        <StackPanel Spacing="12">
+                            <StackPanel Orientation="Horizontal" Spacing="12">
+                                <Viewbox Height="24" Width="24"  >
+                                    <PathIcon Data="{StaticResource PowerPlantIcon}"/>
+                                </Viewbox>
+                                <TextBlock Text="Power Plants" />
+                                <TextBlock Text="2xS2" />
+                                <TextBlock Text="Diligence" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Spacing="12">
+                                <Viewbox Height="24" Width="24"  >
+                                    <PathIcon Data="{StaticResource PowerPlantIcon}"/>
+                                </Viewbox>
+                                <TextBlock Text="Coolers" />
+                                <TextBlock Text="2xS2" />
+                                <TextBlock Text="CoolCore" />
+                            </StackPanel>
+                        </StackPanel>
                     </PivotItem>
                     <PivotItem Header="Propulsion">
-                        <TextBlock Text="unread emails go here." />
+                        <Grid RowSpacing="12" ColumnSpacing="12">
+                            <Grid.RowDefinitions>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock Text="System" Style="{StaticResource CaptionTextBlockStyle}"></TextBlock>
+
+                            <StackPanel Grid.Row="1" Orientation="Horizontal" Spacing="12">
+                                <Viewbox Height="24" Width="24"  >
+                                    <PathIcon Data="{StaticResource PowerPlantIcon}"/>
+                                </Viewbox>
+                                <TextBlock Text="PowerPlants" />
+                            </StackPanel>
+                            <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
+                                <TextBlock Text="2x" />
+                                <TextBlock Text="S2" FontWeight="Bold"/>
+                            </StackPanel>
+                            <TextBlock Grid.Row="1" Text="Diligence" Grid.Column="2"/>
+                            
+                            <StackPanel Grid.Row="2" Orientation="Horizontal" Spacing="12">
+                                <Viewbox Height="24" Width="24"  >
+                                    <PathIcon Data="{StaticResource CoolerIcon}"/>
+                                </Viewbox>
+                                <TextBlock Text="Coolers" />
+                            </StackPanel>
+                            <StackPanel Grid.Row="2" Grid.Column="1"  Orientation="Horizontal">
+                                <TextBlock Text="2x" />
+                                <TextBlock Text="S2" FontWeight="Bold"/>
+                            </StackPanel>
+                            <TextBlock Grid.Row="2"  Grid.Column="2" Text="CoolCore"/>
+
+                            <StackPanel Grid.Row="3" Orientation="Horizontal" Spacing="12">
+                                <Viewbox Height="24" Width="24"  >
+                                    <PathIcon Data="{StaticResource ShieldGeneratorIcon}"/>
+                                </Viewbox>
+                                <TextBlock Text="Shield Generators" />
+                            </StackPanel>
+                            <StackPanel Grid.Row="3"  Grid.Column="1" Orientation="Horizontal">
+                                <TextBlock Text="2x" />
+                                <TextBlock Text="S2" FontWeight="Bold"/>
+                            </StackPanel>
+                            <TextBlock Grid.Row="3"  Grid.Column="2" Text="Aspis"/>
+
+                            <TextBlock Grid.Row="4" Text="Avionics" Style="{StaticResource CaptionTextBlockStyle}"/>
+
+                            <StackPanel Grid.Row="5" Orientation="Horizontal" Spacing="12">
+                                <Viewbox Height="24" Width="24"  >
+                                    <PathIcon Data="{StaticResource ShieldGeneratorIcon}"/>
+                                </Viewbox>
+                                <TextBlock Text="Radars" />
+                            </StackPanel>
+                            <StackPanel Grid.Row="5"  Grid.Column="1" Orientation="Horizontal">
+                                <TextBlock Text="2x" />
+                                <TextBlock Text="S2" FontWeight="Bold"/>
+                            </StackPanel>
+                            <TextBlock Grid.Row="5"  Grid.Column="2" Text="Aspis"/>
+
+                            <StackPanel Grid.Row="6" Orientation="Horizontal" Spacing="12">
+                                <Viewbox Height="24" Width="24"  >
+                                    <PathIcon Data="{StaticResource ShieldGeneratorIcon}"/>
+                                </Viewbox>
+                                <TextBlock Text="Computers" />
+                            </StackPanel>
+                            <StackPanel Grid.Row="6"  Grid.Column="1" Orientation="Horizontal">
+                                <TextBlock Text="5x" />
+                                <TextBlock Text="S2" FontWeight="Bold"/>
+                            </StackPanel>
+                            <TextBlock Grid.Row="6"  Grid.Column="2" Text="Aspis"/>
+                        </Grid>
                     </PivotItem>
                     <PivotItem Header="Weaponry">
                         <TextBlock Text="flagged emails go here." />
