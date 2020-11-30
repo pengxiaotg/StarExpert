@@ -259,7 +259,7 @@
                         </ScrollViewer>
                     </GridViewItem>
                 </GridView>
-                <Pivot Margin="14,0,24,0">
+                <Pivot Margin="14,0,12,0">
                     <Pivot.ItemContainerStyle>
                         <Style TargetType="PivotItem">
                             <Setter Property="Margin" Value="12,12,12,12"/>
@@ -317,8 +317,8 @@
                                 <TextBlock Text="2x" />
                                 <TextBlock Text="S2" FontWeight="Bold"/>
                             </StackPanel>
-                            <TextBlock Grid.Row="1" Text="Diligence" Grid.Column="2"/>
-                            
+                            <TextBlock Grid.Row="1"  Grid.Column="2" Text="Diligence"/>
+
                             <StackPanel Grid.Row="2" Orientation="Horizontal" Spacing="12">
                                 <Viewbox Height="24" Width="24"  >
                                     <PathIcon Data="{StaticResource CoolerIcon}"/>
@@ -370,11 +370,14 @@
                             <TextBlock Grid.Row="6"  Grid.Column="2" Text="Aspis"/>
                         </Grid>
                     </PivotItem>
-                    <PivotItem Header="Weaponry">
-                        <TextBlock Text="flagged emails go here." />
+                    <PivotItem Header="3D Model">
+                        <Grid x:Name="WeaponryTab">
+
+                        </Grid>
                     </PivotItem>
                 </Pivot>
             </StackPanel>
+            <WebView Height="Auto" Width="200" Source="https://github.com/AkiyaX/StarExpert/pull/5"/>
             <Grid x:Name="MainContents" >
                 <StackPanel>
                     <Rectangle Fill="#DAECF4" Height="200" />
