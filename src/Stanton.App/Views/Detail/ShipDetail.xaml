@@ -37,6 +37,7 @@
                                        FontStretch="Undefined">
                                 The Mercury Star Runner is a courier ship by Crusader Industries that is focused on quickly and discreetly delivering small payloads of goods or data. With features such as dedicated data storage computers and "smugglers' holds", the mercury made a name for itself delivering crucial information into the right hands.
                             </TextBlock>
+                            <Button x:Name="MyButton" Click="MyButton_Click"/>
                         </StackPanel>
                         <GridView x:Name="GridView" 
                                   IsItemClickEnabled="False"

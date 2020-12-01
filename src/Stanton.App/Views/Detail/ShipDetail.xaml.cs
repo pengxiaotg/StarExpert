@@ -68,5 +68,10 @@ namespace Stanton.App.Views.Detail
             var col = Math.Min(Math.Ceiling(ActualWidth / 400), GridView.Items.Count);
             ((ItemsWrapGrid)GridView.ItemsPanelRoot).ItemWidth = e.NewSize.Width / col;
         }
+
+        private void MyButton_Click(object sender, RoutedEventArgs e)
+        {
+            //Frame.Navigate(typeof(SettingsPage));
+        }
     }
 }
