@@ -5,10 +5,11 @@
     xmlns:local="using:Stanton.App.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc ="using:Microsoft.UI.Xaml.Controls"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
-    LayoutUpdated="Page_LayoutUpdated"
-    NavigationCacheMode="Enabled">
+    Loaded="Page_Loaded"
+    LayoutUpdated="Page_LayoutUpdated">
 
     <ScrollViewer x:Name="MainScrollViewer" >
         <StackPanel Spacing="12">
@@ -436,7 +437,7 @@
                     </PivotItem>
                     <PivotItem Header="3D Model">
                         <Grid x:Name="WeaponryTab">
-
+                            <muxc:ProgressRing x:Name="MyProgressRing" IsActive="True" Canvas.ZIndex="3" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                         </Grid>
                     </PivotItem>
                 </Pivot>
@@ -444,6 +445,7 @@
             <WebView Height="Auto" Width="200" Source="https://github.com/AkiyaX/StarExpert/pull/5"/>
             <Grid x:Name="MainContents" >
                 <StackPanel>
+                    <Button Click="Button_Click" Content="Test"></Button>
                     <Rectangle Fill="#DAECF4" Height="200" />
                     <Rectangle Fill="#91C5DD" Height="200" />
                     <Rectangle Fill="#DAECF4" Height="200" />

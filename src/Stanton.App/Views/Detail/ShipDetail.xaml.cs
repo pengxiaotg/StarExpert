@@ -71,7 +71,7 @@ namespace Stanton.App.Views.Detail
 
         private void MyButton_Click(object sender, RoutedEventArgs e)
         {
-            //Frame.Navigate(typeof(SettingsPage));
+            Frame.Navigate(typeof(SettingsPage));
         }
     }
 }
