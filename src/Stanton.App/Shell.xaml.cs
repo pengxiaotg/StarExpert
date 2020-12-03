@@ -36,7 +36,7 @@ namespace Stanton.App
             NavigationItems = new[]
             {
                 new NavEntry(HomeItem, typeof(HomePage)),
-                new NavEntry(ShipItem, typeof(ShipDetail)),
+                new NavEntry(ShipItem, typeof(ShipDetailPage)),
                 new NavEntry((NavigationViewItem)NavigationView.SettingsItem, typeof(SettingsPage))
             };
 
