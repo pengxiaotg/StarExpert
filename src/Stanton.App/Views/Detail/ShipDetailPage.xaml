@@ -436,9 +436,11 @@
                                         <TextBlock Text="S2" FontWeight="Bold"/>
                                     </StackPanel>
                                     <TextBlock Grid.Row="3"  Grid.Column="2" Text=""/>
-                                    
-                                </Grid>
 
+                                </Grid>
+                            </PivotItem>
+                            <PivotItem Header="Weaponary">
+                                
                             </PivotItem>
                             <PivotItem Header="3D Model">
                                 <Grid x:Name="WebViewGrid">

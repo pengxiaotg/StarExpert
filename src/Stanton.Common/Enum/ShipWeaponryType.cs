@@ -10,5 +10,7 @@ namespace Stanton.Common.Enum
         Weapons = 1,
         Turrets = 2,
         Missiles = 3,
+        MiningLaserHeads = 4,
+        MissileLauncher = 5,
     }
 }

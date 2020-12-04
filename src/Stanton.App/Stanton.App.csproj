@@ -123,6 +123,7 @@
     <Compile Include="Shell.xaml.cs">
       <DependentUpon>Shell.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\ShipDetailViewModel.cs" />
     <Compile Include="Views\Detail\ShipDetailPage.xaml.cs">
       <DependentUpon>ShipDetailPage.xaml</DependentUpon>
     </Compile>
@@ -193,6 +194,9 @@
     </PackageReference>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.11</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Toolkit.Mvvm">
+      <Version>7.0.0-preview4</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.UI.Xaml">
       <Version>2.4.3</Version>
