@@ -123,8 +123,8 @@
     <Compile Include="Shell.xaml.cs">
       <DependentUpon>Shell.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Detail\ShipDetail.xaml.cs">
-      <DependentUpon>ShipDetail.xaml</DependentUpon>
+    <Compile Include="Views\Detail\ShipDetailPage.xaml.cs">
+      <DependentUpon>ShipDetailPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
@@ -167,9 +167,9 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Detail\ShipDetail.xaml">
-      <SubType>Designer</SubType>
+    <Page Include="Views\Detail\ShipDetailPage.xaml">
       <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\HomePage.xaml">
       <SubType>Designer</SubType>

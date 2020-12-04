@@ -107,7 +107,6 @@ namespace Stanton.App.Views.Detail
             offsetExpression.SetReferenceParameter("scroller", scrollerPropertySet);
             headerVisual.StartAnimation("Offset.Y", offsetExpression);
 
-
             Visual textVisual = ElementCompositionPreview.GetElementVisual(HeaderText);
             Vector3 finalOffset = new Vector3(0, 0, 0);
             var headerOffsetAnimation = compositor.CreateExpressionAnimation($"Lerp(Vector3(0,0,0), finalOffset, {progress})");
