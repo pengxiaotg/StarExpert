@@ -78,11 +78,17 @@ namespace Stanton.App
             if(args.IsSettingsInvoked)
             {
                 NavigationFrame.Navigate(typeof(SettingsPage));
+                
             }
             if (NavigationItems.FirstOrDefault(item => item.Item == args.InvokedItemContainer)?.PageType is Type pageType)
             {
                 NavigationFrame.Navigate(pageType);
             }
+        }
+
+        public void SetHeader(string header)
+        {
+            NavigationView.Header = header;
         }
 
         /// <summary>

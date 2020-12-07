@@ -14,9 +14,20 @@
     <Grid>
         <muxc:NavigationView 
             x:Name="NavigationView"
+            Header="{Binding Path=Content.NavTitle, ElementName=NavigationFrame}"
             IsTitleBarAutoPaddingEnabled="False"
             ItemInvoked="NavigationView_ItemInvoked"
             BackRequested="NavigationView_BackRequested">
+            <muxc:NavigationView.HeaderTemplate>
+                <DataTemplate>
+                    <Grid Margin="12,24,0,0">
+                        <TextBlock x:Name="appTitle" Style="{StaticResource TitleTextBlockStyle}"
+                               FontSize="28"
+                               VerticalAlignment="Center"
+                               Text="{Binding}"/>
+                    </Grid>
+                </DataTemplate>
+            </muxc:NavigationView.HeaderTemplate>
             <muxc:NavigationView.PaneTitle>
                 Star Expert
             </muxc:NavigationView.PaneTitle>
@@ -121,5 +132,5 @@
             Background="Transparent">
         </Border>
     </Grid>
-    
+
 </Page>
