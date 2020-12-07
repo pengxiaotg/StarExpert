@@ -33,7 +33,6 @@ namespace Stanton.App
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
-            ConfigLogger();
         }
 
         private void ConfigLogger()
@@ -66,6 +65,7 @@ namespace Stanton.App
                 ExtendAcrylicIntoTitleBar();
             }
 
+            ConfigLogger();
             await ThemeSelectorService.InitializeAsync().ConfigureAwait(false);
             await ThemeSelectorService.SetRequestedThemeAsync();
         }

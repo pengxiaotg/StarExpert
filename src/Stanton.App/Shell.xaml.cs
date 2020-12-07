@@ -17,7 +17,6 @@ using NavigationView = Microsoft.UI.Xaml.Controls.NavigationView;
 using NavigationViewItem = Microsoft.UI.Xaml.Controls.NavigationViewItem;
 using NavigationViewBackRequestedEventArgs = Microsoft.UI.Xaml.Controls.NavigationViewBackRequestedEventArgs;
 using NavigationViewItemInvokedEventArgs = Microsoft.UI.Xaml.Controls.NavigationViewItemInvokedEventArgs;
-using Stanton.App.Views.Detail;
 using System.ComponentModel;
 
 #nullable enable
@@ -36,7 +35,7 @@ namespace Stanton.App
             NavigationItems = new[]
             {
                 new NavEntry(HomeItem, typeof(HomePage)),
-                new NavEntry(ShipItem, typeof(ShipDetailPage)),
+                new NavEntry(ShipItem, typeof(ShipListPage)),
                 new NavEntry((NavigationViewItem)NavigationView.SettingsItem, typeof(SettingsPage))
             };
 

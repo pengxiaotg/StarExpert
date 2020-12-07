@@ -21,7 +21,7 @@
             <muxc:NavigationView.HeaderTemplate>
                 <DataTemplate>
                     <Grid Margin="12,24,0,0">
-                        <TextBlock x:Name="appTitle" Style="{StaticResource TitleTextBlockStyle}"
+                        <TextBlock Style="{StaticResource TitleTextBlockStyle}"
                                FontSize="28"
                                VerticalAlignment="Center"
                                Text="{Binding}"/>
