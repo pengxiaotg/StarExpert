@@ -5,7 +5,6 @@ namespace Stanton.App.Helpers
 {
     public class EnumToBooleanConverter : IValueConverter
     {
-        
         public Type EnumType { get; set; }
 
         public object Convert(object value, Type targetType, object parameter, string language)
