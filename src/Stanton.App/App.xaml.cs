@@ -14,16 +14,9 @@ using Windows.UI;
 using Windows.UI.ViewManagement;
 using Windows.Storage;
 using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using Stanton.App.Views;
 using Serilog;
-using Stanton.Common.Util;
-using Stanton.Service;
+using Stanton.App.Services;
 
 namespace Stanton.App
 {
@@ -40,8 +33,6 @@ namespace Stanton.App
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
-            ConfigLogger();
-            new ShipManager().Test();
         }
 
         private void ConfigLogger()
@@ -60,7 +51,7 @@ namespace Stanton.App
         /// 将在启动应用程序以打开特定文件等情况下使用。
         /// </summary>
         /// <param name="e">有关启动请求和过程的详细信息。</param>
-        protected override void OnLaunched(LaunchActivatedEventArgs e)
+        protected override async void OnLaunched(LaunchActivatedEventArgs e)
         {
             if (Window.Current.Content is null)
             {
@@ -73,7 +64,12 @@ namespace Stanton.App
                 Window.Current.Activate();
                 ExtendAcrylicIntoTitleBar();
             }
+
+            ConfigLogger();
+            await ThemeSelectorService.InitializeAsync().ConfigureAwait(false);
+            await ThemeSelectorService.SetRequestedThemeAsync();
         }
+
 
         private void ExtendAcrylicIntoTitleBar()
         {

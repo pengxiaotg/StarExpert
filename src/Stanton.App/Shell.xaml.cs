@@ -17,15 +17,16 @@ using NavigationView = Microsoft.UI.Xaml.Controls.NavigationView;
 using NavigationViewItem = Microsoft.UI.Xaml.Controls.NavigationViewItem;
 using NavigationViewBackRequestedEventArgs = Microsoft.UI.Xaml.Controls.NavigationViewBackRequestedEventArgs;
 using NavigationViewItemInvokedEventArgs = Microsoft.UI.Xaml.Controls.NavigationViewItemInvokedEventArgs;
-
+using System.ComponentModel;
 
 #nullable enable
 
 namespace Stanton.App
 {
-    public sealed partial class Shell : UserControl
+    public sealed partial class Shell : Page
     {
         private readonly IReadOnlyCollection<NavEntry> NavigationItems;
+
 
         public Shell()
         {
@@ -34,6 +35,7 @@ namespace Stanton.App
             NavigationItems = new[]
             {
                 new NavEntry(HomeItem, typeof(HomePage)),
+                new NavEntry(ShipItem, typeof(ShipListPage)),
                 new NavEntry((NavigationViewItem)NavigationView.SettingsItem, typeof(SettingsPage))
             };
 
@@ -46,7 +48,7 @@ namespace Stanton.App
         private void Shell_OnLoaded(object sender, RoutedEventArgs e)
         {
             NavigationView.SelectedItem = HomeItem;
-            NavigationFrame.Navigate(typeof(SettingsPage));
+            NavigationFrame.Navigate(typeof(HomePage));
         }
 
 
@@ -69,6 +71,24 @@ namespace Stanton.App
             }
         }
 
+
+        private void NavigationView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
+        {
+            if(args.IsSettingsInvoked)
+            {
+                NavigationFrame.Navigate(typeof(SettingsPage));
+                
+            }
+            if (NavigationItems.FirstOrDefault(item => item.Item == args.InvokedItemContainer)?.PageType is Type pageType)
+            {
+                NavigationFrame.Navigate(pageType);
+            }
+        }
+
+        public void SetHeader(string header)
+        {
+            NavigationView.Header = header;
+        }
 
         /// <summary>
         /// A simple model for tracking pages associated with buttons.
@@ -103,15 +123,5 @@ namespace Stanton.App
             /// </summary>
             public string? Tags { get; }
         }
-
-        private void NavigationView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
-        {
-            if (NavigationItems.FirstOrDefault(item => item.Item == args.InvokedItemContainer)?.PageType is Type pageType)
-            {
-                NavigationFrame.Navigate(pageType);
-            }
-        }
-
-
     }
 }

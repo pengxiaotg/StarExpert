@@ -1,5 +1,4 @@
-﻿using Stanton.App.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -13,7 +12,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using Stanton.App.Helpers;
+using Stanton.App.Views.Detail;
+
 // https://go.microsoft.com/fwlink/?LinkId=234238 上介绍了“空白页”项模板
 
 namespace Stanton.App.Views
@@ -21,21 +21,18 @@ namespace Stanton.App.Views
     /// <summary>
     /// 可用于自身或导航至 Frame 内部的空白页。
     /// </summary>
-    public sealed partial class SettingsPage : Page, ISubPage
+    public sealed partial class ShipListPage : Page, ISubPage
     {
-        public SettingsViewModel ViewModel { get; } = new SettingsViewModel();
-
-        public string NavTitle => "Settings_Title".GetLocalized();
-
-        public SettingsPage()
+        public ShipListPage()
         {
             this.InitializeComponent();
         }
 
-        protected override async void OnNavigatedTo(NavigationEventArgs e)
+        public string NavTitle => "Ship / Viecle";
+
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            await ViewModel.InitializeAsync();
+            Frame.Navigate(typeof(ShipDetailPage));
         }
-        
     }
 }

@@ -1,4 +1,4 @@
-﻿<UserControl
+﻿<Page
     x:Class="Stanton.App.Shell"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -14,11 +14,22 @@
     <Grid>
         <muxc:NavigationView 
             x:Name="NavigationView"
+            Header="{Binding Path=Content.NavTitle, ElementName=NavigationFrame}"
             IsTitleBarAutoPaddingEnabled="False"
             ItemInvoked="NavigationView_ItemInvoked"
             BackRequested="NavigationView_BackRequested">
+            <muxc:NavigationView.HeaderTemplate>
+                <DataTemplate>
+                    <Grid Margin="12,24,0,0">
+                        <TextBlock Style="{StaticResource TitleTextBlockStyle}"
+                               FontSize="28"
+                               VerticalAlignment="Center"
+                               Text="{Binding}"/>
+                    </Grid>
+                </DataTemplate>
+            </muxc:NavigationView.HeaderTemplate>
             <muxc:NavigationView.PaneTitle>
-                Star Citizen
+                Star Expert
             </muxc:NavigationView.PaneTitle>
             <muxc:NavigationView.MenuItems>
                 <muxc:NavigationViewItem x:Name="HomeItem" 
@@ -27,7 +38,8 @@
                                          Tag="home"/>
                 <muxc:NavigationViewItemSeparator/>
 
-                <muxc:NavigationViewItem Content="Ships / Vehicles" >
+                <muxc:NavigationViewItem x:Name="ShipItem" 
+                                         Content="Ships / Vehicles" >
                     <muxc:NavigationViewItem.Icon>
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE709;"/>
                     </muxc:NavigationViewItem.Icon>
@@ -37,22 +49,22 @@
 
                 <muxc:NavigationViewItem Content="Power Plants">
                     <muxc:NavigationViewItem.Icon>
-                        <PathIcon Data="M43,50H36.12V46.24h5.27l4.85-4.85V8.55L41.38,3.76H36.12V0H43l7,7V43ZM13.87,50H7L0,43V7L7,0h6.88V3.76H8.55L3.76,8.55V41.38l4.79,4.79h5.33Zm4.7-7.06L32.46,23.59l-7-.58L31.35,8.7H20.29L17.56,25.53l4.44.55Z"/>
+                        <PathIcon Data="{StaticResource PowerPlantIcon}"/>
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
                 <muxc:NavigationViewItem Content="Coolers">
                     <muxc:NavigationViewItem.Icon>
-                        <PathIcon Data="M25,0A24.84,24.84,0,0,0,10,5.06h0A25,25,0,1,0,40,44.94h0A25,25,0,0,0,25,0ZM38.28,37a11.19,11.19,0,0,1-8.51-4.91l-.89-1.32L25.16,32l.33,2.23A11.19,11.19,0,0,0,34,43.48l2.74.66A22.3,22.3,0,0,1,25,47.46c-.45,0-.9,0-1.35-.07l-2.39-4.9a11.19,11.19,0,0,1,0-9.83l.7-1.43L19,28.64,17.25,30A11.19,11.19,0,0,0,13.47,42l.81,2.74A22.59,22.59,0,0,1,4.93,35l3-4.52a11.2,11.2,0,0,1,8.51-4.92l1.59-.11.77-3.85-2.1-.83a11.18,11.18,0,0,0-12.23,2.7l-2,2.06c0-.19,0-.37,0-.57A22.33,22.33,0,0,1,6.27,12.64l5.46.38a11.19,11.19,0,0,1,8.51,4.91l.89,1.32L24.84,18l-.33-2.23a11.2,11.2,0,0,0-8.46-9.24l-2.74-.66A22.33,22.33,0,0,1,25,2.54c.45,0,.9,0,1.35.07l2.4,4.9a11.2,11.2,0,0,1,0,9.83L28,18.77,31,21.36,32.76,20A11.19,11.19,0,0,0,36.53,8l-.81-2.74A22.59,22.59,0,0,1,45.07,15L42,19.5a11.21,11.21,0,0,1-8.51,4.92l-1.59.11-.77,3.85,2.1.83a11.19,11.19,0,0,0,12.24-2.7l2-2.06c0,.19,0,.37,0,.56a22.33,22.33,0,0,1-3.73,12.36L38.28,37Z"/>
+                        <PathIcon Data="{StaticResource CoolerIcon}"/>
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
                 <muxc:NavigationViewItem Content="Shield Generators">
                     <muxc:NavigationViewItem.Icon>
-                        <PathIcon Data="M46.5,31.11,50,25,46.5,19H41.79L38.66,13.5,41,9.41,37.51,3.35h-7L28.13,7.43H21.87L19.51,3.35h-7L9,9.41l2.35,4.09L8.22,18.93H3.5L0,25l3.5,6.11H8.22l3.13,5.43L9,40.59l3.5,6.07h7l2.35-4.09h6.27l2.35,4.09h7L41,40.59,38.63,36.5l3.16-5.39Zm-16,3.41L28.15,38.6H21.87l-2.35-4.09H14.79l-3.13-5.43L14,25l-2.35-4.09,3.13-5.43h4.72l2.35-4.09h6.27l2.35,4.09h4.72l3.13,5.43L36,25l2.35,4.09-3.13,5.43Z"/>
+                        <PathIcon Data="{StaticResource ShieldGeneratorIcon}"/>
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
                 <muxc:NavigationViewItem Content="Quantum Drives">
                     <muxc:NavigationViewItem.Icon>
-                        <PathIcon Data="M50,25,25,50,0,25,25,0ZM25,46,46,25,25,4,4,25ZM23.54,30.72v8.5h2.83v-8.5h4.3v-4.3h8.5V23.54H30.72V19.28h-4.3v-8.5H23.54v8.5H19.28v4.26h-8.5v2.83h8.5v4.3Z"/>
+                        <PathIcon Data="{StaticResource QuantumDriveIcon}"/>
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
 
@@ -60,19 +72,19 @@
 
                 <muxc:NavigationViewItem Content="Gun">
                     <muxc:NavigationViewItem.Icon>
-                        <PathIcon Data="M27.09,46.34l-1,1h6.08L20.56,35.7a3.48,3.48,0,0,0,0-4.8l-5.93,1.52a3.48,3.48,0,0,0,.84,3.25L3.84,47.31H9.92l-1-1L18,37.19ZM50,16.79l-.9,1-5.64,1.52-1-.46L26,23.23l.18.67-2.78,3.94L6,32.5l-1.72-1L2.75,25.93l1-1.72,20.15-5.39,1.08.44.18.67,16.42-4.42.65-.9,5.55-1.52,1.26.41ZM47.25,6.33l-.9.9L40.72,8.75l-1-.46L23.28,12.76l.18.67-2.77,4.18L3.25,22.29l-1.73-1L0,15.47l1-1.72L21.13,8.36l1.08.44.18.67L38.82,5.07l.68-.88L45,2.67l1.26.41Z"/>
+                        <PathIcon Data="{StaticResource ShipWeaponIcon}"/>
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
 
                 <muxc:NavigationViewItem Content="Missiles">
                     <muxc:NavigationViewItem.Icon>
-                        <PathIcon Data="M 25.19 45.22 23.42 34.61 28.37 29.67 29.62 25.83 36.13 19.32 40.55 23.73 42.02 21.44 41.13 14.32 47.16 8.29 50 0 41.71 2.84 35.68 8.87 28.56 7.98 26.27 9.45 30.68 13.87 24.17 20.38 20.33 21.64 15.39 26.58 4.78 24.81 0 28.2 9.02 32.95 7.76 35.82 14.18 42.24 17.05 40.98 21.8 50 25.19 45.22z"/>
+                        <PathIcon Data="{StaticResource MissileIcon}"/>
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
 
                 <muxc:NavigationViewItem Content="Mining Laser Heads">
                     <muxc:NavigationViewItem.Icon>
-                        <PathIcon Data="M33.56,3.57H47.62L50,1.21H0L2.36,3.57H16.84V5.81l1.68,1.73H6.32L8.64,9.85H19.91V21l-1.59,1.58V32l1.59,1.63h2.47c.14,2.74.43,4.23,2.55,6.17a3.91,3.91,0,0,1,1.6,2.74,3.12,3.12,0,0,1-6.23.09.59.59,0,0,0-.6-.56.68.68,0,0,0-.63.62v.16a5.91,5.91,0,1,0,9.58-4.58,5.74,5.74,0,0,1-1.8-4.59h3.32L31.76,32V27.61l-1-1.07V9.85H41.27l2.39-2.36H31.81l1.75-1.75ZM28.23,24.08,25.14,21H22.41V9.85h5.81Z"/>
+                        <PathIcon Data="{StaticResource UtilityItemIcon}"/>
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
 
@@ -81,43 +93,19 @@
 
                 <muxc:NavigationViewItem Content="Armor">
                     <muxc:NavigationViewItem.Icon>
-                        <fa:FontAwesome Icon="Shield"/>
+                        <PathIcon Data="{StaticResource ArmorIcon}"/>
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
 
                 <muxc:NavigationViewItem Content="Weapon">
                     <muxc:NavigationViewItem.Icon>
-                        <PathIcon Data="M494.579,8.034c-6.065-5.52-15.512-4.987-21.311,0.812l-4.591,4.591L458.383,3.144c-3.825-3.824-10.05-4.278-14.113-0.708
-			                            c-4.452,3.911-4.616,10.699-0.493,14.822l10.539,10.539l-17.189,17.189l-6.107-6.107c-5.948-5.949-15.592-5.949-21.54,0
-			                            L300.816,147.543c-4.309,4.309-5.479,10.552-3.546,15.929l-10.829,10.829c-1.667-0.613-3.438-0.951-5.248-0.951
-			                            c-4.039,0-7.914,1.605-10.77,4.461l-17.05,17.05l-16.066-16.066c-8.804-8.805-22.721-9.513-32.372-1.648l-62.144,50.63
-			                            c-5.294,4.313-8.529,10.698-8.876,17.518c-0.347,6.819,2.223,13.5,7.051,18.328l21.823,21.823l-17.05,17.05
-			                            c-2.856,2.856-4.461,6.731-4.461,10.77c0,1.844,0.35,3.647,0.984,5.34l-10.54,10.414c-5.378-1.933-11.621-0.763-15.929,3.546
-			                            L16.889,431.47c-6.053,6.053-5.931,15.904,0.271,21.805l57.312,54.528c6.708,6.382,17.51,5.353,22.892-2.181l81.439-113.996
-			                            c4.147-6.049,3.394-14.196-1.793-19.382l-8.297-8.297l8.46-8.477l13.393,13.393l25.486,75.927
-			                            c2.127,6.336,8.041,10.387,14.433,10.387c1.324,0,2.669-0.174,4.006-0.537l65.393-17.794c4.953-1.348,9.089-4.95,10.751-9.806
-			                            c2.363-6.906-0.44-14.297-6.435-17.972l-6.313-3.871l-19.653-72.227l17.782-15.091c26.909,19.082,59.273,29.52,92.555,29.52
-			                            c5.66,0,11.349-0.302,17.04-0.914c5.617-0.604,10.41-4.341,12.46-9.604l17.355-44.554c1.93-4.955,1.136-10.557-2.094-14.781
-			                            s-8.427-6.459-13.717-5.892c-25.788,2.753-51.469-2.374-73.869-14.126c0.105-1.014,0.188-2.031,0.23-3.055
-			                            c0.565-13.828-4.724-27.372-14.51-37.158l-8.06-8.06l8.79-8.79l15.078,15.078c2.865,2.865,6.743,4.461,10.769,4.461
-			                            c0.316,0,0.633-0.01,0.95-0.03c4.362-0.272,8.396-2.405,11.077-5.856l95.034-122.295c4.712-6.064,4.173-14.686-1.257-20.116
-			                            l-5.181-5.181l36.445-36.445C501.232,23.961,501.054,13.927,494.579,8.034z M226.933,309.254l-7.802,7.801
-			                            c-1.983,1.982-4.581,2.974-7.18,2.974s-5.198-0.991-7.18-2.974c-3.965-3.965-3.965-10.395,0.001-14.36l7.802-7.801
-			                            c3.966-3.965,10.396-3.965,14.36,0C230.899,298.859,230.899,305.289,226.933,309.254z M184.329,263.906l-16.905-16.905
-			                            l52.354-42.654l12.055,12.055L184.329,263.906z"/>
+                        <PathIcon Data="{StaticResource CharaterWeapon}"/>
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
 
                 <muxc:NavigationViewItem Content="Clothing">
                     <muxc:NavigationViewItem.Icon>
-                        <PathIcon Data="M295.158,58.839c-0.608-1.706-1.873-3.109-3.521-3.873l-56.343-26.01c-11.985-4.06-24.195-7.267-36.524-9.611
-		                                c-0.434-0.085-0.866-0.126-1.292-0.126c-3.052,0-5.785,2.107-6.465,5.197c-4.502,19.82-22.047,34.659-43.251,34.659
-		                                c-21.203,0-38.749-14.838-43.25-34.659c-0.688-3.09-3.416-5.197-6.466-5.197c-0.426,0-0.858,0.041-1.292,0.126
-		                                c-12.328,2.344-24.538,5.551-36.542,9.611L3.889,54.965c-1.658,0.764-2.932,2.167-3.511,3.873
-		                                c-0.599,1.726-0.491,3.589,0.353,5.217l24.46,48.272c1.145,2.291,3.474,3.666,5.938,3.666c0.636,0,1.281-0.092,1.917-0.283
-		                                l27.167-8.052v161.97c0,3.678,3.001,6.678,6.689,6.678h161.723c3.678,0,6.67-3.001,6.67-6.678V107.66l27.186,8.052
-		                                c0.636,0.191,1.28,0.283,1.915,0.283c2.459,0,4.779-1.375,5.94-3.666l24.469-48.272C295.629,62.428,295.747,60.565,295.158,58.839z
-		                                "/>
+                        <PathIcon Data="{StaticResource ClothingIcon}"/>
                     </muxc:NavigationViewItem.Icon>
                 </muxc:NavigationViewItem>
             </muxc:NavigationView.MenuItems>
@@ -137,11 +125,12 @@
 
         <Border
             x:Name="TitleBarBorder"
-            Margin="40,0,0,0"
+            Margin="80,0,0,0"
             Padding="8,0,0,0"
             Height="40"
             VerticalAlignment="Top"
             Background="Transparent">
         </Border>
     </Grid>
-</UserControl>
+
+</Page>

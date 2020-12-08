@@ -3,7 +3,7 @@ using Stanton.Common.Attribute;
 
 namespace Stanton.Common.Entity
 {
-    public class Ship
+    public class Ship : GameItem
     {
         public string Name { get; set; }
         public string Manufacturer { get; set; }

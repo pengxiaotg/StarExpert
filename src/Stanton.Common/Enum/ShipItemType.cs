@@ -4,12 +4,12 @@ using System.Text;
 
 namespace Stanton.Common.Enum
 {
-    public enum ShipComponentType
+    public enum ShipItemType
     {
         None = 0,
         PowerPlant = 1,
-        Coolers = 2,
-        ShieldGenerators = 3,
-        QuantumDrive = 4
+        Cooler = 2,
+        ShieldGenerator = 3,
+        QuantumDrive = 4,
     }
 }
