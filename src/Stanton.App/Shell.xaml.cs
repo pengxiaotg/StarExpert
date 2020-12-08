@@ -43,14 +43,12 @@ namespace Stanton.App
             Window.Current.SetTitleBar(TitleBarBorder);
         }
 
-
         // Select the introduction item when the shell is loaded
         private void Shell_OnLoaded(object sender, RoutedEventArgs e)
         {
             NavigationView.SelectedItem = HomeItem;
             NavigationFrame.Navigate(typeof(HomePage));
         }
-
 
         private void NavigationView_BackRequested(NavigationView sender, NavigationViewBackRequestedEventArgs args)
         {
@@ -70,7 +68,6 @@ namespace Stanton.App
                 NavigationView.SelectedItem = NavigationView.SettingsItem;
             }
         }
-
 
         private void NavigationView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
         {

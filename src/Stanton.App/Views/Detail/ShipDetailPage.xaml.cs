@@ -44,7 +44,6 @@ namespace Stanton.App.Views.Detail
             ModelWebView.Opacity = 1;
         }
 
-
         protected override void OnNavigatedFrom(NavigationEventArgs e)
         {
             if (WebViewGrid.Children.Contains(ModelWebView))
@@ -71,7 +70,6 @@ namespace Stanton.App.Views.Detail
             }
             ModelWebView.DOMContentLoaded += MyWebView_DOMContentLoaded;
         }
-
 
         private void EnableWebView()
         {

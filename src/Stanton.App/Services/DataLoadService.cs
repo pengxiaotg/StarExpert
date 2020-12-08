@@ -10,7 +10,6 @@ namespace Stanton.App.Services
 {
     class DataLoadService
     {
-
         public static async void LoadFromDataAsync()
         {
             await LoadShipDataAsync();

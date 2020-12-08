@@ -10,7 +10,6 @@ using Windows.Storage.Streams;
 
 namespace Stanton.App.Helpers
 {
-
     public static class SettingsStorageExtensions
     {
         private const string FileExtension = ".json";
