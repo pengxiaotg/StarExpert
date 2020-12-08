@@ -1,7 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-
 namespace Stanton.Common.Util
 {
     public class Json

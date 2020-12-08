@@ -36,6 +36,5 @@ namespace Stanton.App.Views
         {
             await ViewModel.InitializeAsync();
         }
-        
     }
 }

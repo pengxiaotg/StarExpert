@@ -70,7 +70,6 @@ namespace Stanton.App
             await ThemeSelectorService.SetRequestedThemeAsync();
         }
 
-
         private void ExtendAcrylicIntoTitleBar()
         {
             CoreApplication.GetCurrentView().TitleBar.ExtendViewIntoTitleBar = true;

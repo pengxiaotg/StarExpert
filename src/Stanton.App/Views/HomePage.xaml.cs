@@ -51,13 +51,11 @@ namespace Stanton.App.Views
             MyWebView.DOMContentLoaded += MyWebView_DOMContentLoaded;
         }
 
-
         private void MyWebView_DOMContentLoaded(WebView sender, WebViewDOMContentLoadedEventArgs args)
         {
             MyProgressRing.IsActive = false;
             MyWebView.Opacity = 1;
         }
-
 
         protected override void OnNavigatedFrom(NavigationEventArgs e)
         {
@@ -75,7 +73,6 @@ namespace Stanton.App.Views
 
         private void Page_LayoutUpdated(object sender, object e)
         {
-
         }
     }
 }
