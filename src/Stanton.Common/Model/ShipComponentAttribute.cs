@@ -1,4 +1,4 @@
-﻿namespace Stanton.Common.Attribute
+﻿namespace Stanton.Common.Model
 {
     public class ShipComponentAttribute
     {

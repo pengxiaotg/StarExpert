@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Xaml.Controls;
 
-namespace Stanton.App.Views
+namespace Stanton.App.Helpers
 {
     public static class WebViewSingleton
     {

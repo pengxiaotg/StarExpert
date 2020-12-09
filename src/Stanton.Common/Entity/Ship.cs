@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Stanton.Common.Attribute;
+using Stanton.Common.Model;
 
 namespace Stanton.Common.Entity
 {

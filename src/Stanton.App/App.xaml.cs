@@ -1,21 +1,11 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
+﻿using System;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.ApplicationModel.Core;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI;
 using Windows.UI.ViewManagement;
-using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Navigation;
-using Serilog;
 using Stanton.App.Services;
 
 namespace Stanton.App
@@ -33,17 +23,6 @@ namespace Stanton.App
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
-        }
-
-        private void ConfigLogger()
-        {
-            string fileName = DateTime.Today.Date.ToString("yyyy_MM_dd") + ".log";
-            string filePath = Path.Combine(ApplicationData.Current.LocalCacheFolder.Path, "logs");
-            Log.Logger = new LoggerConfiguration()
-                .MinimumLevel.Debug()
-                .WriteTo.File(Path.Combine(filePath, fileName))
-                .CreateLogger();
-            Log.Information("Serilog config completed!");
         }
 
         /// <summary>
@@ -65,7 +44,8 @@ namespace Stanton.App
                 ExtendAcrylicIntoTitleBar();
             }
 
-            ConfigLogger();
+            LogService.ConfigLogger();
+            DataLoadService.LoadFromDataAsync();
             await ThemeSelectorService.InitializeAsync().ConfigureAwait(false);
             await ThemeSelectorService.SetRequestedThemeAsync();
         }

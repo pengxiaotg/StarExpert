@@ -284,9 +284,15 @@
                                     <Setter Property="Margin" Value="12,12,12,12"/>
                                 </Style>
                             </Pivot.ItemContainerStyle>
-                            <PivotItem Header="Avionics &amp; Systems">
+                            <PivotItem Header="Components">
                                 <Grid RowSpacing="12" ColumnSpacing="12">
                                     <Grid.RowDefinitions>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
+                                        <RowDefinition/>
                                         <RowDefinition/>
                                         <RowDefinition/>
                                         <RowDefinition/>
@@ -367,9 +373,60 @@
                                         <TextBlock Text="S2" FontWeight="Bold"/>
                                     </StackPanel>
                                     <TextBlock Grid.Row="6"  Grid.Column="2" Text="" FontWeight="ExtraBlack"/>
+
+                                    <TextBlock Grid.Row="7" Text="Propulsion" Style="{StaticResource CaptionTextBlockStyle}"/>
+                                    
+                                    <StackPanel Grid.Row="8" Orientation="Horizontal" Spacing="12">
+                                        <Viewbox Height="24" Width="24"  >
+                                            <PathIcon Data="{StaticResource QuantumDriveIcon}"/>
+                                        </Viewbox>
+                                        <TextBlock Text="Quantum drives" FontWeight="Light"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="8" Grid.Column="1" Orientation="Horizontal">
+                                        <TextBlock Text="1x" />
+                                        <TextBlock Text="S2" FontWeight="Bold"/>
+                                    </StackPanel>
+                                    <TextBlock Grid.Row="8"  Grid.Column="2" Text="Bolon" FontWeight="ExtraBlack"/>
+
+                                    <StackPanel Grid.Row="9" Orientation="Horizontal" Spacing="12">
+                                        <Viewbox Height="24" Width="24"  >
+                                            <PathIcon Data="{StaticResource QuantumFuelTankIcon}"/>
+                                        </Viewbox>
+                                        <TextBlock Text="Quantum fuel Tanks" FontWeight="Light"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="9" Grid.Column="1" Orientation="Horizontal">
+                                        <TextBlock Text="2x" />
+                                        <TextBlock Text="S2" FontWeight="Bold"/>
+                                    </StackPanel>
+                                    <TextBlock Grid.Row="9"  Grid.Column="2" Text=""/>
+
+                                    <StackPanel Grid.Row="10" Orientation="Horizontal" Spacing="12">
+                                        <Viewbox Height="24" Width="24"  >
+                                            <PathIcon Data="{StaticResource JumpDriveIcon}"/>
+                                        </Viewbox>
+                                        <TextBlock Text="Jump drives" FontWeight="Light"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="10" Grid.Column="1" Orientation="Horizontal">
+                                        <TextBlock Text="2x" />
+                                        <TextBlock Text="S2" FontWeight="Bold"/>
+                                    </StackPanel>
+                                    <TextBlock Grid.Row="2"  Grid.Column="2" Text=""/>
+
+                                    <StackPanel Grid.Row="11" Orientation="Horizontal" Spacing="12">
+                                        <Viewbox Height="24" Width="24"  >
+                                            <PathIcon Data="{StaticResource FuelTankIcon}"/>
+                                        </Viewbox>
+                                        <TextBlock Text="Fuel tanks" FontWeight="Light"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="11" Grid.Column="1" Orientation="Horizontal">
+                                        <TextBlock Text="2x" />
+                                        <TextBlock Text="S2" FontWeight="Bold"/>
+                                    </StackPanel>
+                                    <TextBlock Grid.Row="11"  Grid.Column="2" Text=""/>
+
                                 </Grid>
                             </PivotItem>
-                            <PivotItem Header="Propulsion">
+                            <PivotItem Header="Weaponary">
                                 <Grid RowSpacing="12" ColumnSpacing="12">
                                     <Grid.RowDefinitions>
                                         <RowDefinition/>
@@ -389,58 +446,8 @@
                                         <ColumnDefinition Width="Auto"/>
                                     </Grid.ColumnDefinitions>
 
-                                    <StackPanel Grid.Row="0" Orientation="Horizontal" Spacing="12">
-                                        <Viewbox Height="24" Width="24"  >
-                                            <PathIcon Data="{StaticResource QuantumDriveIcon}"/>
-                                        </Viewbox>
-                                        <TextBlock Text="Quantum drives" FontWeight="Light"/>
-                                    </StackPanel>
-                                    <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
-                                        <TextBlock Text="1x" />
-                                        <TextBlock Text="S2" FontWeight="Bold"/>
-                                    </StackPanel>
-                                    <TextBlock Grid.Row="0"  Grid.Column="2" Text="Bolon" FontWeight="ExtraBlack"/>
-
-                                    <StackPanel Grid.Row="1" Orientation="Horizontal" Spacing="12">
-                                        <Viewbox Height="24" Width="24"  >
-                                            <PathIcon Data="{StaticResource QuantumFuelTankIcon}"/>
-                                        </Viewbox>
-                                        <TextBlock Text="Quantum fuel Tanks" FontWeight="Light"/>
-                                    </StackPanel>
-                                    <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
-                                        <TextBlock Text="2x" />
-                                        <TextBlock Text="S2" FontWeight="Bold"/>
-                                    </StackPanel>
-                                    <TextBlock Grid.Row="1"  Grid.Column="2" Text=""/>
-
-                                    <StackPanel Grid.Row="2" Orientation="Horizontal" Spacing="12">
-                                        <Viewbox Height="24" Width="24"  >
-                                            <PathIcon Data="{StaticResource JumpDriveIcon}"/>
-                                        </Viewbox>
-                                        <TextBlock Text="Jump drives" FontWeight="Light"/>
-                                    </StackPanel>
-                                    <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal">
-                                        <TextBlock Text="2x" />
-                                        <TextBlock Text="S2" FontWeight="Bold"/>
-                                    </StackPanel>
-                                    <TextBlock Grid.Row="2"  Grid.Column="2" Text=""/>
-
-                                    <StackPanel Grid.Row="3" Orientation="Horizontal" Spacing="12">
-                                        <Viewbox Height="24" Width="24"  >
-                                            <PathIcon Data="{StaticResource FuelTankIcon}"/>
-                                        </Viewbox>
-                                        <TextBlock Text="Fuel tanks" FontWeight="Light"/>
-                                    </StackPanel>
-                                    <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal">
-                                        <TextBlock Text="2x" />
-                                        <TextBlock Text="S2" FontWeight="Bold"/>
-                                    </StackPanel>
-                                    <TextBlock Grid.Row="3"  Grid.Column="2" Text=""/>
 
                                 </Grid>
-                            </PivotItem>
-                            <PivotItem Header="Weaponary">
-                                
                             </PivotItem>
                             <PivotItem Header="3D Model">
                                 <Grid x:Name="WebViewGrid">
