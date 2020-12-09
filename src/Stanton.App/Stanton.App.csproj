@@ -131,6 +131,7 @@
     </Compile>
     <Compile Include="ViewModels\SettingsViewModel.cs" />
     <Compile Include="ViewModels\ShipDetailViewModel.cs" />
+    <Compile Include="ViewModels\ShipListViewModel.cs" />
     <Compile Include="Views\Detail\ShipDetailPage.xaml.cs">
       <DependentUpon>ShipDetailPage.xaml</DependentUpon>
     </Compile>
