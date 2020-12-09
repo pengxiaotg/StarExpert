@@ -124,6 +124,7 @@
     <Compile Include="Helpers\ResourceExtentions.cs" />
     <Compile Include="Helpers\SettingsStorageExtentions.cs" />
     <Compile Include="Services\DataLoadService.cs" />
+    <Compile Include="Services\LogService.cs" />
     <Compile Include="Services\ThemeSelectorService.cs" />
     <Compile Include="Shell.xaml.cs">
       <DependentUpon>Shell.xaml</DependentUpon>
@@ -136,7 +137,7 @@
     <Compile Include="Views\HomePage.xaml.cs">
       <DependentUpon>HomePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\ISubPage.cs" />
+    <Compile Include="Helpers\ISubPage.cs" />
     <Compile Include="Views\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
@@ -147,7 +148,7 @@
     <Compile Include="Views\ShipListPage.xaml.cs">
       <DependentUpon>ShipListPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\WebViewSingleton.cs" />
+    <Compile Include="Helpers\WebViewSingleton.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -246,9 +247,10 @@
   <ItemGroup>
     <PRIResource Include="String\en-us\Resources.resw" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <None Include="Data\Ships.json" />
+    <EmbeddedResource Include="Data\Ships.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
@@ -261,5 +263,4 @@
   <Target Name="AfterBuild">
   </Target>
   -->
-
 </Project>

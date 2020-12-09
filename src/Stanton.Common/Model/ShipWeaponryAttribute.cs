@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Stanton.Common.Attribute
+namespace Stanton.Common.Model
 {
     public class ShipWeaponryAttribute
     {

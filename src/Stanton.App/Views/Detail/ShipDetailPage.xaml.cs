@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Numerics;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Composition;
 using Windows.UI.Xaml.Hosting;
-using System.Numerics;
 using Windows.UI.Xaml.Navigation;
+using Stanton.App.Helpers;
 
 // https://go.microsoft.com/fwlink/?LinkId=234238 上介绍了“空白页”项模板
 
