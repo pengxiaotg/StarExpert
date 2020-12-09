@@ -18,6 +18,7 @@ using System.Threading.Tasks;
 using Windows.UI.ViewManagement;
 using Windows.UI;
 using Stanton.App.Services;
+using System.Numerics;
 
 // https://go.microsoft.com/fwlink/?LinkId=234238 上介绍了“空白页”项模板
 
