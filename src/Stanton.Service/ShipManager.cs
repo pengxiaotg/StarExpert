@@ -22,5 +22,10 @@ namespace Stanton.Service
                 Log.Error(e.Message);
             }
         }
+
+        public static ICollection<Ship> GetAllShips()
+        {
+            return _ships;
+        }
     }
 }

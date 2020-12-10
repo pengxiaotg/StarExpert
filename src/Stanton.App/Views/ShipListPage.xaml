@@ -5,14 +5,112 @@
     xmlns:local="using:Stanton.App.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:cts ="using:Microsoft.Toolkit.Uwp.UI.Controls"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+        <Style TargetType="TextBlock" x:Key="CustomTextStyle">
+            <Setter Property="Foreground" Value="{ThemeResource SystemBaseHighColor}" />
+        </Style>
+    </Page.Resources>
+    <Grid Margin="24,0,24,24">
+        <StackPanel Spacing="24">
 
-    <Grid>
-        <GridView>
-            <GridViewItem>
-                <Button Content="Mercury Star Runner" Click="Button_Click"/>
-            </GridViewItem>
-        </GridView>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Orientation="Horizontal" Spacing="12" Grid.Column="0">
+                    <ToggleButton VerticalAlignment="Bottom" ToolTipService.ToolTip="Flight Ready">
+                        <ToggleButton.Content>
+                            <Viewbox Height="36" Margin="0,0,4,0">
+                                    <PathIcon Data="{StaticResource FlightReadyIcon}"/>
+                                </Viewbox>
+                        </ToggleButton.Content>
+                    </ToggleButton>
+                    
+                    <ComboBox PlaceholderText="All" Width="200" Header="Manufacturer">
+                        <x:String>Crusader Industries</x:String>
+                    </ComboBox>
+
+                    <ComboBox PlaceholderText="All" Width="120" Header="Size">
+                        <x:String>Large</x:String>
+                        <x:String>Meduim</x:String>
+                        <x:String>Small</x:String>
+                    </ComboBox>
+
+                    <ComboBox PlaceholderText="Name" Header="Sort">
+                        <x:String>Name</x:String>
+                        <x:String>Price</x:String>
+                    </ComboBox>
+                    
+                    
+                </StackPanel>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Column="2">
+                    <AutoSuggestBox MinWidth="100" Width="200" PlaceholderText="Search ship" QueryIcon="Find" VerticalAlignment="Bottom"/>
+                </StackPanel>
+
+            </Grid>
+
+            <GridView>
+                <GridViewItem Width="400" Background="{ThemeResource SystemListLowColor}">
+                    <StackPanel>
+                        <Grid>
+                            <Image Source="ms-appx:///Assets/images/ship/Mercury Star Runner/2.jpeg" Stretch="Fill"/>
+                            <cts:DropShadowPanel Color="Black" 
+                                                 OffsetX="-40"
+                                                 OffsetY="-40"
+                                                 BlurRadius="50"
+                                                 ShadowOpacity=".5"
+                                                 Width="40"
+                                                 Height="40"
+                                                 HorizontalContentAlignment="Right"
+                                                 VerticalContentAlignment="Bottom"
+                                                 HorizontalAlignment="Right"
+                                                 VerticalAlignment="Bottom"
+                                                 Margin="12,12,12,12">
+                                <PathIcon Data="{StaticResource FlightReadyIcon}" 
+                                          Foreground="White">
+                                </PathIcon>
+                            </cts:DropShadowPanel>
+                        </Grid>
+                        <Grid Margin="12,12,12,12">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Orientation="Horizontal" 
+                                        Grid.Column="0"
+                                        Spacing="12">
+                                <Viewbox Height="40">
+                                    <PathIcon Data="{StaticResource CrusaderIndustriesIcon}"/>
+                                </Viewbox>
+                                <StackPanel>
+                                    <TextBlock Text="Medium Cargo / Data Courier" Style="{StaticResource CaptionTextBlockStyle}"/>
+                                    <TextBlock Text="Mercury Star Runner" Style="{StaticResource TitleTextBlockStyle}"/>
+                                </StackPanel>
+                            </StackPanel>
+                            <StackPanel Grid.Column="2" Orientation="Horizontal">
+
+                                <TextBlock x:Name="PriceText"
+                                           Text="$260"
+                                           FontSize="24"
+                                           FontWeight="Bold"
+                                           HorizontalAlignment="Right"
+                                           VerticalAlignment="Bottom">
+                                    
+                                </TextBlock>
+                                
+                            </StackPanel>
+                        </Grid>
+                    </StackPanel>
+                </GridViewItem>
+            </GridView>
+        </StackPanel>
     </Grid>
 </Page>
