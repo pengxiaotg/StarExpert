@@ -29,7 +29,6 @@ namespace Stanton.App.ViewModels
 
         private void OnItemSelected(ItemClickEventArgs args)
         {
-            
         }
     }
 }

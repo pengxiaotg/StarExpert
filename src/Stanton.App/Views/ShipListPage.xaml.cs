@@ -38,7 +38,6 @@ namespace Stanton.App.Views
             Loaded += ShipListPage_Loaded;
         }
 
-
         private async void ShipListPage_Loaded(object sender, RoutedEventArgs e)
         {
             var isDark = ThemeSelectorService.Theme == ElementTheme.Dark;
@@ -49,7 +48,6 @@ namespace Stanton.App.Views
             PriceText.Foreground = new SolidColorBrush(isDark ? Colors.LightGreen : Colors.DarkGreen);
             await ViewModel.LoadDataAsync();
         }
-
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
