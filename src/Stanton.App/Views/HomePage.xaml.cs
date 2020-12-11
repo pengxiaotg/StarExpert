@@ -21,6 +21,5 @@ namespace Stanton.App.Views
         {
             this.InitializeComponent();
         }
-
     }
 }

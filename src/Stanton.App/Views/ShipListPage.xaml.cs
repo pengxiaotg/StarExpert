@@ -59,7 +59,6 @@ namespace Stanton.App.Views
             AdjustThemeSetting();
         }
 
-
         private void collection_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Frame.Navigate(typeof(ShipDetailPage));
