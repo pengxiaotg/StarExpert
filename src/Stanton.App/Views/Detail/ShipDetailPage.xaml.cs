@@ -5,16 +5,11 @@ using Windows.UI.Xaml.Controls;
 using Windows.UI.Composition;
 using Windows.UI.Xaml.Hosting;
 using Windows.UI.Xaml.Navigation;
-using Stanton.App.Helpers;
 using Windows.UI.Xaml.Media.Animation;
-
-// https://go.microsoft.com/fwlink/?LinkId=234238 上介绍了“空白页”项模板
+using Stanton.App.Helpers;
 
 namespace Stanton.App.Views.Detail
 {
-    /// <summary>
-    /// 可用于自身或导航至 Frame 内部的空白页。
-    /// </summary>
     public sealed partial class ShipDetailPage : Page
     {
         private static readonly WebView ModelWebView = WebViewSingleton.GetInstance();
@@ -57,8 +52,8 @@ namespace Stanton.App.Views.Detail
             {
                 if(FlipView.SelectedIndex == 0)
                 {
-                    ConnectedAnimation animation = ConnectedAnimationService.GetForCurrentView().PrepareToAnimate("backAnimation", DestinationImage);
-                    animation.Configuration = new DirectConnectedAnimationConfiguration();
+                    //ConnectedAnimation animation = ConnectedAnimationService.GetForCurrentView().PrepareToAnimate("backAnimation", DestinationImage);
+                    //animation.Configuration = new DirectConnectedAnimationConfiguration();
                 }
             }
         }
@@ -69,7 +64,7 @@ namespace Stanton.App.Views.Detail
             ConnectedAnimation animation = ConnectedAnimationService.GetForCurrentView().GetAnimation("forwardAnimation");
             if (animation != null)
             {
-                animation.TryStart(DestinationImage, new UIElement[] { MainContents });
+                //animation.TryStart(DestinationImage, new UIElement[] { MainContents });
             }
         }
 

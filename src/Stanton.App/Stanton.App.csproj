@@ -121,8 +121,10 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Helpers\EnumToBooleanConverter.cs" />
+    <Compile Include="Helpers\ManufacturerHelper.cs" />
     <Compile Include="Helpers\ResourceExtentions.cs" />
     <Compile Include="Helpers\SettingsStorageExtentions.cs" />
+    <Compile Include="Model\ShipItem.cs" />
     <Compile Include="Services\DataLoadService.cs" />
     <Compile Include="Services\LogService.cs" />
     <Compile Include="Services\ThemeSelectorService.cs" />
@@ -210,6 +212,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="AutoMapper">
+      <Version>10.1.1</Version>
+    </PackageReference>
     <PackageReference Include="FontAwesome.UWP">
       <Version>4.7.0.9</Version>
     </PackageReference>

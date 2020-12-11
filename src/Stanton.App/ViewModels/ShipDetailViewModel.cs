@@ -10,6 +10,5 @@ namespace Stanton.App.ViewModels
 {
     class ShipDetailViewModel : ObservableObject
     {
-        public Ship ship;
     }
 }

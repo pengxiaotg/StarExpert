@@ -1,22 +1,15 @@
 ﻿using System;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Media.Animation;
-using Stanton.App.Views.Detail;
-using Stanton.App.ViewModels;
 using Windows.UI.ViewManagement;
-using Windows.UI;
-using Stanton.App.Services;
 using Windows.UI.Xaml.Navigation;
-
-// https://go.microsoft.com/fwlink/?LinkId=234238 上介绍了“空白页”项模板
+using Stanton.App.Services;
+using Stanton.App.ViewModels;
+using Stanton.App.Views.Detail;
 
 namespace Stanton.App.Views
 {
-    /// <summary>
-    /// 可用于自身或导航至 Frame 内部的空白页。
-    /// </summary>
     public sealed partial class ShipListPage : Page, ISubPage
     {
         public string NavTitle => "Ship / Viecle";
@@ -50,12 +43,12 @@ namespace Stanton.App.Views
             {
                 isDark = ThemeSelectorService.Theme == ElementTheme.Dark;
             }
-            PriceText.Foreground = new SolidColorBrush(isDark ? Colors.LightGreen : Colors.DarkGreen);
+            //PriceText.Foreground = new SolidColorBrush(isDark ? Colors.LightGreen : Colors.DarkGreen);
         }
 
-        private async void ShipListPage_Loaded(object sender, RoutedEventArgs e)
+        private void ShipListPage_Loaded(object sender, RoutedEventArgs e)
         {
-            await ViewModel.LoadDataAsync();
+            ViewModel.LoadData();
             AdjustThemeSetting();
         }
 
@@ -69,7 +62,7 @@ namespace Stanton.App.Views
             base.OnNavigatedFrom(e);
             if(e.SourcePageType == typeof(ShipDetailPage))
             {
-                var animation = ConnectedAnimationService.GetForCurrentView().PrepareToAnimate("forwardAnimation", SourceImage);
+                //var animation = ConnectedAnimationService.GetForCurrentView().PrepareToAnimate("forwardAnimation", SourceImage);
             }
         }
 
@@ -79,7 +72,7 @@ namespace Stanton.App.Views
             var animation = ConnectedAnimationService.GetForCurrentView().GetAnimation("backAnimation");
             if(animation != null)
             {
-                animation.TryStart(SourceImage);
+                //animation.TryStart(SourceImage);
             }
         }
     }
