@@ -1,24 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
+using Windows.UI.Xaml.Media.Animation;
 using Stanton.App.Views.Detail;
 using Stanton.App.ViewModels;
-using System.Threading.Tasks;
 using Windows.UI.ViewManagement;
 using Windows.UI;
 using Stanton.App.Services;
-using System.Numerics;
+using Windows.UI.Xaml.Navigation;
 
 // https://go.microsoft.com/fwlink/?LinkId=234238 上介绍了“空白页”项模板
 
@@ -69,9 +59,29 @@ namespace Stanton.App.Views
             AdjustThemeSetting();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+
+        private void collection_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             Frame.Navigate(typeof(ShipDetailPage));
+        }
+
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        {
+            base.OnNavigatedFrom(e);
+            if(e.SourcePageType == typeof(ShipDetailPage))
+            {
+                var animation = ConnectedAnimationService.GetForCurrentView().PrepareToAnimate("forwardAnimation", SourceImage);
+            }
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            var animation = ConnectedAnimationService.GetForCurrentView().GetAnimation("backAnimation");
+            if(animation != null)
+            {
+                animation.TryStart(SourceImage);
+            }
         }
     }
 }

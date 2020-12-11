@@ -6,6 +6,7 @@ using Windows.UI.Composition;
 using Windows.UI.Xaml.Hosting;
 using Windows.UI.Xaml.Navigation;
 using Stanton.App.Helpers;
+using Windows.UI.Xaml.Media.Animation;
 
 // https://go.microsoft.com/fwlink/?LinkId=234238 上介绍了“空白页”项模板
 
@@ -47,9 +48,28 @@ namespace Stanton.App.Views.Detail
 
         protected override void OnNavigatedFrom(NavigationEventArgs e)
         {
+            base.OnNavigatedFrom(e);
             if (WebViewGrid.Children.Contains(ModelWebView))
             {
                 WebViewGrid.Children.Remove(ModelWebView);
+            }
+            if (e.NavigationMode == NavigationMode.Back)
+            {
+                if(FlipView.SelectedIndex == 0)
+                {
+                    ConnectedAnimation animation = ConnectedAnimationService.GetForCurrentView().PrepareToAnimate("backAnimation", DestinationImage);
+                    animation.Configuration = new DirectConnectedAnimationConfiguration();
+                }
+            }
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            ConnectedAnimation animation = ConnectedAnimationService.GetForCurrentView().GetAnimation("forwardAnimation");
+            if (animation != null)
+            {
+                animation.TryStart(DestinationImage, new UIElement[] { MainContents });
             }
         }
 
@@ -97,11 +117,9 @@ namespace Stanton.App.Views.Detail
             var headerVisual = ElementCompositionPreview.GetElementVisual(ScrollHeader);
             String progress = $"Clamp(Abs(scroller.Translation.Y) / {height}, 0.0, 1.0)";
 
-            // Create the expression and add in our progress string.
             var textExpression = compositor.CreateExpressionAnimation("Lerp(1.5, 1, " + progress + ")");
             textExpression.SetReferenceParameter("scroller", scrollerPropertySet);
 
-            // Shift the header by 50 pixels when scrolling down
             var offsetExpression = compositor.CreateExpressionAnimation($"-scroller.Translation.Y - {progress} * {height}");
             offsetExpression.SetReferenceParameter("scroller", scrollerPropertySet);
             headerVisual.StartAnimation("Offset.Y", offsetExpression);

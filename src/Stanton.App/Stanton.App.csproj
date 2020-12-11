@@ -159,8 +159,8 @@
   <ItemGroup>
     <Content Include="Assets\icons\FlightReady.svg" />
     <Content Include="Assets\images\Nothing.png" />
-    <Content Include="Assets\images\ship\Mercury Star Runner\1.jpeg" />
     <Content Include="Assets\images\ship\Mercury Star Runner\2.jpeg" />
+    <Content Include="Assets\images\ship\Mercury Star Runner\1.jpeg" />
     <Content Include="Assets\images\ship\Mercury Star Runner\3.jpeg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />

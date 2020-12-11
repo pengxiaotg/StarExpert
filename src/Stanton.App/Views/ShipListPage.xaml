@@ -56,11 +56,13 @@
 
             </Grid>
 
-            <GridView>
-                <GridViewItem Width="400" Background="{ThemeResource SystemListLowColor}">
+            <GridView SelectionChanged="collection_SelectionChanged" x:Name="collection">
+                <GridViewItem x:Name="Mercury"
+                              Width="400" 
+                              Background="{ThemeResource SystemListLowColor}">
                     <StackPanel>
                         <Grid>
-                            <Image Source="ms-appx:///Assets/images/ship/Mercury Star Runner/2.jpeg" Stretch="Fill"/>
+                            <Image x:Name="SourceImage" Source="ms-appx:///Assets/images/ship/Mercury Star Runner/1.jpeg" Stretch="Fill"/>
                             <cts:DropShadowPanel Color="Black" 
                                                  OffsetX="-40"
                                                  OffsetY="-40"
