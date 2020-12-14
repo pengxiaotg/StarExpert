@@ -94,6 +94,7 @@
                                 <StackPanel Grid.Column="2" Orientation="Horizontal">
                                     <!-- Price -->
                                     <TextBlock Text="{x:Bind PriceText}"
+                                               Foreground="{ThemeResource PriceBrush}"
                                                FontSize="24"
                                                FontWeight="Bold"
                                                HorizontalAlignment="Right"
