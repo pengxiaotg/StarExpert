@@ -1,10 +1,7 @@
-﻿using System;
-using Windows.UI.Xaml;
+﻿using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Animation;
-using Windows.UI.ViewManagement;
 using Windows.UI.Xaml.Navigation;
-using Stanton.App.Services;
 using Stanton.App.ViewModels;
 using Stanton.App.Views.Detail;
 
@@ -19,37 +16,12 @@ namespace Stanton.App.Views
         {
             this.InitializeComponent();
             Loaded += ShipListPage_Loaded;
-            UISettings uiSettings = new UISettings();
-            uiSettings.ColorValuesChanged += UISettings_ColorValuesChangedAsync;
         }
 
-        // Thanks to https://stackoverflow.com/questions/65220165/how-to-change-color-to-adjust-theme-setting-in-uwp/65244990#65244990
-        private async void UISettings_ColorValuesChangedAsync(UISettings sender, object args)
-        {
-            await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
-            {
-                AdjustThemeSetting();
-            });
-        }
-
-        private void AdjustThemeSetting()
-        {
-            bool isDark;
-            if (ThemeSelectorService.Theme == ElementTheme.Default)
-            {
-                isDark = Application.Current.RequestedTheme == ApplicationTheme.Dark;
-            }
-            else
-            {
-                isDark = ThemeSelectorService.Theme == ElementTheme.Dark;
-            }
-            //PriceText.Foreground = new SolidColorBrush(isDark ? Colors.LightGreen : Colors.DarkGreen);
-        }
 
         private void ShipListPage_Loaded(object sender, RoutedEventArgs e)
         {
             ViewModel.LoadData();
-            AdjustThemeSetting();
         }
 
         private void collection_SelectionChanged(object sender, SelectionChangedEventArgs e)
