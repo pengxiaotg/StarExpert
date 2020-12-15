@@ -463,29 +463,25 @@
                             Source="ms-appx:///Assets/images/Nothing.png"
                             Width="Auto"/>
                 <FlipView x:Name="FlipView"
-                        Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-                    <Image Source="ms-appx:///Assets/images/ship/Mercury Star Runner/1.jpeg" />
+                          Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                    <Image x:Name="DestinationImage" Source="ms-appx:///Assets/images/ship/Mercury Star Runner/1.jpeg" />
                     <Image Source="ms-appx:///Assets/images/ship/Mercury Star Runner/2.jpeg"/>
                     <Image Source="ms-appx:///Assets/images/ship/Mercury Star Runner/3.jpeg"/>
                 </FlipView>
                 <Grid x:Name="ScrollHeader">
-                    <StackPanel VerticalAlignment="Bottom">
-                        <Grid>
-                            <Rectangle x:Name="HeaderText" Fill="{ThemeResource ApplicationPageBackgroundThemeBrush}"/>
-                            <StackPanel Orientation="Horizontal" Padding="24,12,24,12" Spacing="12">
-                                <Viewbox Width="48" Height="48">
-                                    <PathIcon Data="{StaticResource CrusaderIndustriesIcon}"/>
-                                </Viewbox>
-                                <TextBlock Text="Mercury Star Runner"
-                                           FontSize="48" 
-                                           FontWeight="Bold"/>
-                            </StackPanel>
-                        </Grid>
-                    </StackPanel>
+                    <Grid VerticalAlignment="Bottom">
+                        <Rectangle x:Name="HeaderText" Fill="{ThemeResource ApplicationPageBackgroundThemeBrush}"/>
+                        <StackPanel Orientation="Horizontal" Padding="24,12,24,12" Spacing="12">
+                            <Viewbox Width="48" Height="48">
+                                <PathIcon Data="{StaticResource CrusaderIndustriesIcon}"/>
+                            </Viewbox>
+                            <TextBlock Text="Mercury Star Runner"
+                                       FontSize="48" 
+                                       FontWeight="Bold"/>
+                        </StackPanel>
+                    </Grid>
                 </Grid>
             </Grid>
-
-
         </Grid>
     </ScrollViewer>
 

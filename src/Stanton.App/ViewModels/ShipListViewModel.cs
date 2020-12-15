@@ -1,34 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Windows.UI.Xaml.Controls;
+﻿using System.Collections.ObjectModel;
 using Microsoft.Toolkit.Mvvm.ComponentModel;
+using AutoMapper;
 using Stanton.Common.Entity;
-using Stanton.App.Services;
 using Stanton.Service;
+using Stanton.App.Model;
 
 namespace Stanton.App.ViewModels
 {
     public class ShipListViewModel : ObservableObject
     {
-        public ObservableCollection<Ship> Source = new ObservableCollection<Ship>();
-
-        public async Task LoadDataAsync()
+        public ObservableCollection<ShipItem> Source = new ObservableCollection<ShipItem>();
+        
+        public void LoadData()
         {
             Source.Clear();
-            await DataLoadService.LoadShipDataAsync();
             var data = ShipManager.GetAllShips();
-            foreach(var item in data)
+            var config = new MapperConfiguration(cfg => cfg.CreateMap<Ship, ShipItem>());
+            var mapper = config.CreateMapper();
+            foreach (var item in data)
             {
-                Source.Add(item);
+                Source.Add(mapper.Map<ShipItem>(item));
             }
-        }
-
-        private void OnItemSelected(ItemClickEventArgs args)
-        {
         }
     }
 }

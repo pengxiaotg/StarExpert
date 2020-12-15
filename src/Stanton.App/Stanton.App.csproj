@@ -121,8 +121,10 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Helpers\EnumToBooleanConverter.cs" />
+    <Compile Include="Helpers\ManufacturerHelper.cs" />
     <Compile Include="Helpers\ResourceExtentions.cs" />
     <Compile Include="Helpers\SettingsStorageExtentions.cs" />
+    <Compile Include="Model\ShipItem.cs" />
     <Compile Include="Services\DataLoadService.cs" />
     <Compile Include="Services\LogService.cs" />
     <Compile Include="Services\ThemeSelectorService.cs" />
@@ -159,8 +161,8 @@
   <ItemGroup>
     <Content Include="Assets\icons\FlightReady.svg" />
     <Content Include="Assets\images\Nothing.png" />
-    <Content Include="Assets\images\ship\Mercury Star Runner\1.jpeg" />
     <Content Include="Assets\images\ship\Mercury Star Runner\2.jpeg" />
+    <Content Include="Assets\images\ship\Mercury Star Runner\1.jpeg" />
     <Content Include="Assets\images\ship\Mercury Star Runner\3.jpeg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
@@ -181,6 +183,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Styles\_Icons.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\_Style.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -210,6 +216,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="AutoMapper">
+      <Version>10.1.1</Version>
+    </PackageReference>
     <PackageReference Include="FontAwesome.UWP">
       <Version>4.7.0.9</Version>
     </PackageReference>
