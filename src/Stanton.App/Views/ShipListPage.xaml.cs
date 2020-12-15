@@ -18,7 +18,6 @@ namespace Stanton.App.Views
             Loaded += ShipListPage_Loaded;
         }
 
-
         private void ShipListPage_Loaded(object sender, RoutedEventArgs e)
         {
             ViewModel.LoadData();
