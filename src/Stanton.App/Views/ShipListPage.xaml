@@ -108,9 +108,6 @@
         </StackPanel>
     </Grid>
     <Page.Resources>
-        <Style TargetType="TextBlock" x:Key="CustomTextStyle">
-            <Setter Property="Foreground" Value="{ThemeResource SystemBaseHighColor}" />
-        </Style>
         <Style TargetType="cts:DropShadowPanel">
             <Setter Property="Color" Value="Black" />
             <Setter Property="OffsetX" Value="-40"/>
