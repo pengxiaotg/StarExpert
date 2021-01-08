@@ -12,7 +12,8 @@ namespace Stanton.App.Model
 
         public string PreviewImageSource
         {
-            get => $"ms-appx:///Assets/images/ship/{Name}/1.jpeg";
+            //get => $"ms-appx:///Assets/images/ship/{Name}/1.jpeg";
+            get => $"ms-appx:///Assets/images/ship/Mercury Star Runner/1.jpeg";
         }
 
         public string PriceText

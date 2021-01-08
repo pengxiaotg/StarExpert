@@ -8,105 +8,113 @@
     xmlns:cts ="using:Microsoft.Toolkit.Uwp.UI.Controls" 
     xmlns:model="using:Stanton.App.Model"
     mc:Ignorable="d"
+    xmlns:controls="using:Template10.Controls"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <ScrollViewer>
+        <Grid Margin="24,0,24,24">
+            <StackPanel Spacing="24">
+                <!-- Menu Bar Start -->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
 
-    <Grid Margin="24,0,24,24">
-        <StackPanel Spacing="24">
-            <!-- Menu Bar Start -->
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="Auto" />
-                </Grid.ColumnDefinitions>
+                    <StackPanel Orientation="Horizontal" Spacing="12" Grid.Column="0">
+                        <!-- Flight Ready Filter -->
+                        <ToggleButton VerticalAlignment="Bottom" ToolTipService.ToolTip="Flight Ready">
+                            <ToggleButton.Content>
+                                <Viewbox Height="36" Margin="0,0,4,0">
+                                    <PathIcon Data="{StaticResource FlightReadyIcon}"/>
+                                </Viewbox>
+                            </ToggleButton.Content>
+                        </ToggleButton>
+                        <!-- Manufacturer Filter -->
+                        <ComboBox PlaceholderText="All" Width="200" Header="Manufacturer">
+                            <x:String>Crusader Industries</x:String>
+                        </ComboBox>
+                        <!-- Size Filter -->
+                        <ComboBox PlaceholderText="All" Width="120" Header="Size">
+                            <x:String>Large</x:String>
+                            <x:String>Meduim</x:String>
+                            <x:String>Small</x:String>
+                        </ComboBox>
+                        <!-- Sorter -->
+                        <ComboBox PlaceholderText="Name" Header="Sort">
+                            <x:String>Name</x:String>
+                            <x:String>Price</x:String>
+                        </ComboBox>
+                    </StackPanel>
 
-                <StackPanel Orientation="Horizontal" Spacing="12" Grid.Column="0">
-                    <!-- Flight Ready Filter -->
-                    <ToggleButton VerticalAlignment="Bottom" ToolTipService.ToolTip="Flight Ready">
-                        <ToggleButton.Content>
-                            <Viewbox Height="36" Margin="0,0,4,0">
-                                <PathIcon Data="{StaticResource FlightReadyIcon}"/>
-                            </Viewbox>
-                        </ToggleButton.Content>
-                    </ToggleButton>
-                    <!-- Manufacturer Filter -->
-                    <ComboBox PlaceholderText="All" Width="200" Header="Manufacturer">
-                        <x:String>Crusader Industries</x:String>
-                    </ComboBox>
-                    <!-- Size Filter -->
-                    <ComboBox PlaceholderText="All" Width="120" Header="Size">
-                        <x:String>Large</x:String>
-                        <x:String>Meduim</x:String>
-                        <x:String>Small</x:String>
-                    </ComboBox>
-                    <!-- Sorter -->
-                    <ComboBox PlaceholderText="Name" Header="Sort">
-                        <x:String>Name</x:String>
-                        <x:String>Price</x:String>
-                    </ComboBox>
-                </StackPanel>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Column="2">
+                        <AutoSuggestBox MinWidth="100" Width="200" PlaceholderText="Search ship" QueryIcon="Find" VerticalAlignment="Bottom"/>
+                    </StackPanel>
+                </Grid>
+                <!-- Menu Bar End -->
 
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Column="2">
-                    <AutoSuggestBox MinWidth="100" Width="200" PlaceholderText="Search ship" QueryIcon="Find" VerticalAlignment="Bottom"/>
-                </StackPanel>
-            </Grid>
-            <!-- Menu Bar End -->
+                <!-- Main Content -->
 
-            <!-- Main Content -->
-            <GridView x:Name="collection" 
+                <GridView x:Name="collection" 
                       ItemsSource="{x:Bind ViewModel.Source}"
-                      SelectionChanged="collection_SelectionChanged" >
-                <GridView.ItemTemplate>
-                    <DataTemplate x:DataType="model:ShipItem">
-                        <StackPanel Width="400"
+                      SelectionChanged="collection_SelectionChanged">
+                    <GridView.ItemContainerStyle>
+                        <Style TargetType="FrameworkElement">
+                            <Setter Property="Margin" Value="0 0 12 12"/>
+                        </Style>
+                    </GridView.ItemContainerStyle>
+                    <GridView.ItemTemplate>
+                        <DataTemplate x:DataType="model:ShipItem">
+                            <StackPanel Width="400"
                                     Background="{ThemeResource SystemListLowColor}">
-                            <Grid>
-                                <!-- Previe Image -->
-                                <Image Source="{x:Bind PreviewImageSource}" Stretch="Fill"/>
-                                <!-- Flyable Icon -->
-                                <cts:DropShadowPanel Visibility="{x:Bind FlightReady}">
-                                    <PathIcon Data="{StaticResource FlightReadyIcon}" 
+                                <Grid>
+                                    <!-- Previe Image -->
+                                    <Image Source="{x:Bind PreviewImageSource}" Stretch="Fill"/>
+                                    <!-- Flyable Icon -->
+                                    <cts:DropShadowPanel Visibility="{x:Bind FlightReady}">
+                                        <PathIcon Data="{StaticResource FlightReadyIcon}" 
                                           Foreground="White">
-                                    </PathIcon>
-                                </cts:DropShadowPanel>
-                            </Grid>
-                            <!-- Text Bottom -->
-                            <Grid Margin="12,12,12,12">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="Auto" />
-                                </Grid.ColumnDefinitions>
-                                <StackPanel Orientation="Horizontal" 
+                                        </PathIcon>
+                                    </cts:DropShadowPanel>
+                                </Grid>
+                                <!-- Text Bottom -->
+                                <Grid Margin="12,12,12,12">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel Orientation="Horizontal" 
                                         Grid.Column="0"
                                         Spacing="12">
-                                    <!-- Manifacture Icon -->
-                                    <Viewbox Height="40">
-                                        <PathIcon Data="{x:Bind ManufacturerIcon}"/>
-                                    </Viewbox>
-                                    <StackPanel>
-                                        <!-- Role -->
-                                        <TextBlock Text="{x:Bind AllRole}" Style="{StaticResource CaptionTextBlockStyle}"/>
-                                        <!-- Name -->
-                                        <TextBlock Text="{x:Bind Name}" Style="{StaticResource TitleTextBlockStyle}"/>
+                                        <!-- Manifacture Icon -->
+                                        <Viewbox Height="40">
+                                            <PathIcon Data="{x:Bind ManufacturerIcon}"/>
+                                        </Viewbox>
+                                        <StackPanel>
+                                            <!-- Role -->
+                                            <TextBlock Text="{x:Bind AllRole}" Style="{StaticResource CaptionTextBlockStyle}"/>
+                                            <!-- Name -->
+                                            <TextBlock Text="{x:Bind Name}" Style="{StaticResource TitleTextBlockStyle}"/>
+                                        </StackPanel>
                                     </StackPanel>
-                                </StackPanel>
-                                <StackPanel Grid.Column="2" Orientation="Horizontal">
-                                    <!-- Price -->
-                                    <TextBlock Text="{x:Bind PriceText}"
+                                    <StackPanel Grid.Column="2" Orientation="Horizontal">
+                                        <!-- Price -->
+                                        <TextBlock Text="{x:Bind PriceText}"
                                                Foreground="{ThemeResource PriceBrush}"
                                                FontSize="24"
                                                FontWeight="Bold"
                                                HorizontalAlignment="Right"
                                                VerticalAlignment="Bottom"/>
-                                </StackPanel>
-                            </Grid>
-                        </StackPanel>
-                    </DataTemplate>
-                </GridView.ItemTemplate>
-            </GridView>
-        </StackPanel>
-    </Grid>
+                                    </StackPanel>
+                                </Grid>
+                            </StackPanel>
+                        </DataTemplate>
+                    </GridView.ItemTemplate>
+                </GridView>
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>
     <Page.Resources>
         <Style TargetType="cts:DropShadowPanel">
             <Setter Property="Color" Value="Black" />

@@ -1,89 +1,1428 @@
 [
-    {
-        "Name": "Mercury Star Runner",
-        "Manufacturer": "Crusader Industries",
-        "Description": "The Mercury checks all the boxes expected of a dependable courier vessel, and then some. If you need it there fast and unscathed, you can’t do better than the Mercury. Built with the same engineering and design principals that has made Crusader the go-to manufacturer for galactic transport on any scale, the star runner chassis sets new standards for data and cargo conveyance.",
-        "Size": "Medium",
-        "Role": [
-            "Medium Cargo",
-            "Data Courier"
-        ],
-        "MinCrew": 2,
-        "MaxCrew": 3,
-        "CargoCapacity": 114,
-        "FlightReady": true,
-        "PledgePrice": 260,
-        "Availability": "Time-limited sales",
-        "Length": 40,
-        "Beam": 38,
-        "Height": 11.6,
-        "CombatSpeed": 215,
-        "MaxSpeed": 1286,
-        "Component": {
-            "PowerPlant": {
-                "Size": 2,
-                "Count": 2,
-                "Default": "Diligence"
-            },
-            "Coolers": {
-                "Size": 2,
-                "Count": 2,
-                "Default": "CoolCore"
-            },
-            "ShieldGenerators": {
-                "Size": 2,
-                "Count": 2,
-                "Default": "Aspis"
-            },
-            "QuantumDrive": {
-                "Size": 2,
-                "Count": 1,
-                "Default": "Bolon"
-            }
+  {
+    "_id": "ObjectId(\"5fdc7c52a52f6045de90be80\")",
+    "Name": "Mercury Star Runner",
+    "Manufacturer": "Crusader Industries",
+    "Description": "The Mercury checks all the boxes expected of a dependable courier vessel, and then some. If you need it there fast and unscathed, you can’t do better than the Mercury. Built with the same engineering and design principals that has made Crusader the go-to manufacturer for galactic transport on any scale, the star runner chassis sets new standards for data and cargo conveyance.",
+    "Size": "Medium",
+    "Role": [
+      "MediumCargo",
+      "DataCourier"
+    ],
+    "MinCrew": 2,
+    "MaxCrew": 3,
+    "CargoCapacity": 114,
+    "FlightReady": true,
+    "PledgePrice": 260,
+    "Availability": "Time-limited sales",
+    "Length": 40,
+    "Beam": 38,
+    "Height": 11.6,
+    "CombatSpeed": 215,
+    "MaxSpeed": 1286,
+    "Component": {
+      "PowerPlant": {
+        "Size": 2,
+        "Count": 2,
+        "Default": "Diligence"
+      },
+      "Coolers": {
+        "Size": 2,
+        "Count": 2,
+        "Default": "CoolCore"
+      },
+      "ShieldGenerators": {
+        "Size": 2,
+        "Count": 2,
+        "Default": "Aspis"
+      },
+      "QuantumDrive": {
+        "Size": 2,
+        "Count": 1,
+        "Default": "Bolon"
+      }
+    },
+    "Weaponry": {
+      "Weapons": [
+        {
+          "Name": "Nose",
+          "Size": 3,
+          "Count": 1,
+          "Mount": [
+            "CF-337 Panther",
+            "CF-337 Panther"
+          ]
+        }
+      ],
+      "Turrets": [
+        {
+          "Name": "Manned",
+          "Size": 3,
+          "Count": 2,
+          "Mount": [
+            "CF-337 Panther",
+            "CF-337 Panther"
+          ]
+        }
+      ],
+      "Missiles": [
+        {
+          "Name": "MSD-313",
+          "Size": 3,
+          "Count": 2,
+          "Mount": [
+            "Arrester III"
+          ]
         },
-        "Weaponry": {
-            "Weapons": [
-                {
-                    "Name": "Nose",
-                    "Size": 3,
-                    "Count": 1,
-                    "Mount": [
-                        "CF-337 Panther",
-                        "CF-337 Panther"
-                    ]
-                }
-            ],
-            "Turrets": [
-                {
-                    "Name": "Manned",
-                    "Size": 3,
-                    "Count": 2,
-                    "Mount": [
-                        "CF-337 Panther",
-                        "CF-337 Panther"
-                    ]
-                }
-            ],
-            "Missiles": [
-                {
-                    "Name": "MSD-313",
-                    "Size": 3,
-                    "Count": 2,
-                    "Mount": [
-                        "Arrester III"
-                    ]
-                },
-                {
-                    "Name": "MSD-322",
-                    "Size": 3,
-                    "Count": 2,
-                    "Mount": [
-                        "Tempest II",
-                        "Tempest II"
-                    ]
-                }
-            ]
-        },
-        "ModelUid": "a6af6d1ae2744a55820d00599aca71f2"
-    }
+        {
+          "Name": "MSD-322",
+          "Size": 3,
+          "Count": 2,
+          "Mount": [
+            "Tempest II",
+            "Tempest II"
+          ]
+        }
+      ]
+    },
+    "ModelUid": "a6af6d1ae2744a55820d00599aca71f2"
+  },
+  {
+    "_id": "ObjectId(\"5fdc7cf2a29904455575700a\")",
+    "Name": "100i",
+    "Manufacturer": "Origin Jumpworks",
+    "Role": [
+      "Starter",
+      "Touring"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 50
+  },
+  {
+    "_id": "ObjectId(\"5fdc7cf3a29904455575700b\")",
+    "Name": "125a",
+    "Manufacturer": "Origin Jumpworks",
+    "Role": [
+      "Starter",
+      "LightFighter"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 60
+  },
+  {
+    "_id": "ObjectId(\"5fdc7cf3a29904455575700c\")",
+    "Name": "135c",
+    "Manufacturer": "Origin Jumpworks",
+    "Role": [
+      "Starter",
+      "LightFreight"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 65
+  },
+  {
+    "_id": "ObjectId(\"5fdc7cf3a29904455575700d\")",
+    "Name": "300i",
+    "Manufacturer": "Origin Jumpworks",
+    "Role": [
+      "Touring"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 60
+  },
+  {
+    "_id": "ObjectId(\"5fdc7cf4a29904455575700e\")",
+    "Name": "315p",
+    "Manufacturer": "Origin Jumpworks",
+    "Role": [
+      "Pathfinder"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 65
+  },
+  {
+    "_id": "ObjectId(\"5fdc7cf4a29904455575700f\")",
+    "Name": "325a",
+    "Manufacturer": "Origin Jumpworks",
+    "Role": [
+      "Interdiction"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 70
+  },
+  {
+    "_id": "ObjectId(\"5fdc7cf4a299044555757010\")",
+    "Name": "350r",
+    "Manufacturer": "Origin Jumpworks",
+    "Role": [
+      "Racing"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 125
+  },
+  {
+    "_id": "ObjectId(\"5fdc7cf4a299044555757011\")",
+    "Name": "600i Explorer",
+    "Manufacturer": "Origin Jumpworks",
+    "Role": [
+      "Touring"
+    ],
+    "Size": "Large",
+    "FlightReady": true,
+    "PledgePrice": 475
+  },
+  {
+    "_id": "ObjectId(\"5fdc7cf5a299044555757012\")",
+    "Name": "600i Touring",
+    "Manufacturer": "Origin Jumpworks",
+    "Role": [
+      "Touring"
+    ],
+    "Size": "Large",
+    "FlightReady": true,
+    "PledgePrice": 435
+  },
+  {
+    "_id": "ObjectId(\"5fdc7cf5a299044555757013\")",
+    "Name": "85X",
+    "Manufacturer": "Origin Jumpworks",
+    "Role": [
+      "Touring"
+    ],
+    "Size": "Snub",
+    "FlightReady": true,
+    "PledgePrice": 50
+  },
+  {
+    "_id": "ObjectId(\"5fdc7cf5a299044555757014\")",
+    "Name": "890 Jump",
+    "Manufacturer": "Origin Jumpworks",
+    "Role": [
+      "Touring"
+    ],
+    "Size": "Capital",
+    "FlightReady": true,
+    "PledgePrice": 950
+  },
+  {
+    "_id": "ObjectId(\"5fdc7cf6a299044555757015\")",
+    "Name": "A2 Hercules",
+    "Manufacturer": "Crusader Industries",
+    "Role": [
+      "HeavyMilitaryLifting",
+      "Bombing"
+    ],
+    "Size": "Large",
+    "FlightReady": false,
+    "PledgePrice": 700
+  },
+  {
+    "_id": "ObjectId(\"5fdc7cf6a299044555757016\")",
+    "Name": "Apollo Medivac",
+    "Manufacturer": "Roberts Space Industries",
+    "Role": [
+      "Support-Medical"
+    ],
+    "Size": "Medium",
+    "FlightReady": false,
+    "PledgePrice": 275
+  },
+  {
+    "_id": "ObjectId(\"5fdc7cf6a299044555757017\")",
+    "Name": "Apollo Triage",
+    "Manufacturer": "Roberts Space Industries",
+    "Role": [
+      "Support-Medical"
+    ],
+    "Size": "Medium",
+    "FlightReady": false,
+    "PledgePrice": 250
+  },
+  {
+    "_id": "ObjectId(\"5fdc7cf7a299044555757018\")",
+    "Name": "Ares Inferno",
+    "Manufacturer": "Crusader Industries",
+    "Role": [
+      "Anti-Capital"
+    ],
+    "Size": "Medium",
+    "FlightReady": false,
+    "PledgePrice": 220
+  },
+  {
+    "_id": "ObjectId(\"5fdc7cf7a299044555757019\")",
+    "Name": "Ares Ion",
+    "Manufacturer": "Crusader Industries",
+    "Role": [
+      "Anti-Capital"
+    ],
+    "Size": "Medium",
+    "FlightReady": false,
+    "PledgePrice": 220
+  },
+  {
+    "_id": "ObjectId(\"5fdc7cf7a29904455575701a\")",
+    "Name": "Arrow",
+    "Manufacturer": "Anvil Aerospace",
+    "Role": [
+      "LightFighter"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 75
+  },
+  {
+    "_id": "ObjectId(\"5fdc7cf8a29904455575701b\")",
+    "Name": "Aurora CL",
+    "Manufacturer": "Roberts Space Industries",
+    "Role": [
+      "LightFreight"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 45
+  },
+  {
+    "_id": "ObjectId(\"5fdc7cf8a29904455575701c\")",
+    "Name": "Aurora ES",
+    "Manufacturer": "Roberts Space Industries",
+    "Role": [
+      "Pathfinder"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 20
+  },
+  {
+    "_id": "ObjectId(\"5fdc7cf8a29904455575701d\")",
+    "Name": "Aurora LN",
+    "Manufacturer": "Roberts Space Industries",
+    "Role": [
+      "LightFighter"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 40
+  },
+  {
+    "_id": "ObjectId(\"5fdc7cf8a29904455575701e\")",
+    "Name": "Aurora LX",
+    "Manufacturer": "Roberts Space Industries",
+    "Role": [
+      "Pathfinder"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 35
+  },
+  {
+    "_id": "ObjectId(\"5fdc7cf9a29904455575701f\")",
+    "Name": "Aurora MR",
+    "Manufacturer": "Roberts Space Industries",
+    "Role": [
+      "LightFighter"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 30
+  },
+  {
+    "_id": "ObjectId(\"5fdc7cf9a299044555757020\")",
+    "Name": "Avenger Stalker",
+    "Manufacturer": "Aegis Dynamics",
+    "Role": [
+      "Interdiction"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 60
+  },
+  {
+    "_id": "ObjectId(\"5fdc7cf9a299044555757021\")",
+    "Name": "Avenger Titan",
+    "Manufacturer": "Aegis Dynamics",
+    "Role": [
+      "LightFreight"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 55
+  },
+  {
+    "_id": "ObjectId(\"5fdc7cfaa299044555757022\")",
+    "Name": "Avenger Warlock",
+    "Manufacturer": "Aegis Dynamics",
+    "Role": [
+      "Interdiction"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 85
+  },
+  {
+    "_id": "ObjectId(\"5fdc7cfaa299044555757023\")",
+    "Name": "Blade",
+    "Manufacturer": "Esperia",
+    "Role": [
+      "LightFighter"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 275
+  },
+  {
+    "_id": "ObjectId(\"5fdc7cfaa299044555757024\")",
+    "Name": "Buccaneer",
+    "Manufacturer": "Drake Interplanetary",
+    "Role": [
+      "Interdiction"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 110
+  },
+  {
+    "_id": "ObjectId(\"5fdc7cfba299044555757025\")",
+    "Name": "C2 Hercules",
+    "Manufacturer": "Crusader Industries",
+    "Role": [
+      "HeavyLifting"
+    ],
+    "Size": "Large",
+    "FlightReady": false,
+    "PledgePrice": 360
+  },
+  {
+    "_id": "ObjectId(\"5fdc7cfba299044555757026\")",
+    "Name": "C8X Pisces Expedition",
+    "Manufacturer": "Anvil Aerospace",
+    "Role": [
+      "Pathfinder"
+    ],
+    "Size": "Snub",
+    "FlightReady": true,
+    "PledgePrice": 45
+  },
+  {
+    "_id": "ObjectId(\"5fdc7cfba299044555757027\")",
+    "Name": "Carrack",
+    "Manufacturer": "Anvil Aerospace",
+    "Role": [
+      "Expedition"
+    ],
+    "Size": "Large",
+    "FlightReady": true,
+    "PledgePrice": 600
+  },
+  {
+    "_id": "ObjectId(\"5fdc7cfca299044555757028\")",
+    "Name": "Caterpillar",
+    "Manufacturer": "Drake Interplanetary",
+    "Role": [
+      "Transport"
+    ],
+    "Size": "Large",
+    "FlightReady": true,
+    "PledgePrice": 295
+  },
+  {
+    "_id": "ObjectId(\"5fdc7cfca299044555757029\")",
+    "Name": "Constellation Andromeda",
+    "Manufacturer": "Roberts Space Industries",
+    "Role": [
+      "MediumFreight"
+    ],
+    "Size": "Large",
+    "FlightReady": true,
+    "PledgePrice": 225
+  },
+  {
+    "_id": "ObjectId(\"5fdc7cfca29904455575702a\")",
+    "Name": "Constellation Aquila",
+    "Manufacturer": "Roberts Space Industries",
+    "Role": [
+      "Expedition"
+    ],
+    "Size": "Large",
+    "FlightReady": true,
+    "PledgePrice": 310
+  },
+  {
+    "_id": "ObjectId(\"5fdc7cfca29904455575702b\")",
+    "Name": "Constellation Phoenix",
+    "Manufacturer": "Roberts Space Industries",
+    "Role": [
+      "Touring"
+    ],
+    "Size": "Large",
+    "FlightReady": true,
+    "PledgePrice": 350
+  },
+  {
+    "_id": "ObjectId(\"5fdc7cfda29904455575702c\")",
+    "Name": "Constellation Taurus",
+    "Manufacturer": "Roberts Space Industries",
+    "Role": [
+      "MediumFreight"
+    ],
+    "Size": "Large",
+    "FlightReady": false,
+    "PledgePrice": 150
+  },
+  {
+    "_id": "ObjectId(\"5fdc7cfda29904455575702d\")",
+    "Name": "Corsair",
+    "Manufacturer": "Drake Interplanetary",
+    "Role": [
+      "Exploration"
+    ],
+    "Size": "Large",
+    "FlightReady": false,
+    "PledgePrice": 215
+  },
+  {
+    "_id": "ObjectId(\"5fdc7cfda29904455575702e\")",
+    "Name": "Crucible",
+    "Manufacturer": "Anvil Aerospace",
+    "Role": [
+      "HeavyRepair"
+    ],
+    "Size": "Large",
+    "FlightReady": false,
+    "PledgePrice": 350
+  },
+  {
+    "_id": "ObjectId(\"5fdc7cfea29904455575702f\")",
+    "Name": "Cutlass Black",
+    "Manufacturer": "Drake Interplanetary",
+    "Role": [
+      "MediumFighter",
+      "MediumFreight"
+    ],
+    "Size": "Medium",
+    "FlightReady": true,
+    "PledgePrice": 100
+  },
+  {
+    "_id": "ObjectId(\"5fdc7cfea299044555757030\")",
+    "Name": "Cutlass Blue",
+    "Manufacturer": "Drake Interplanetary",
+    "Role": [
+      "Interdiction"
+    ],
+    "Size": "Medium",
+    "FlightReady": true,
+    "PledgePrice": 175
+  },
+  {
+    "_id": "ObjectId(\"5fdc7cfea299044555757031\")",
+    "Name": "Cutlass Red",
+    "Manufacturer": "Drake Interplanetary",
+    "Role": [
+      "Search&Rescue"
+    ],
+    "Size": "Medium",
+    "FlightReady": true,
+    "PledgePrice": 135
+  },
+  {
+    "_id": "ObjectId(\"5fdc7cffa299044555757032\")",
+    "Name": "Defender",
+    "Manufacturer": "Banu Souli",
+    "Role": [
+      "LightFighter"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 220
+  },
+  {
+    "_id": "ObjectId(\"5fdc7cffa299044555757033\")",
+    "Name": "Dragonfly",
+    "Manufacturer": "Drake Interplanetary",
+    "Role": [
+      "Racing"
+    ],
+    "Size": "Snub",
+    "FlightReady": true,
+    "PledgePrice": 40
+  },
+  {
+    "_id": "ObjectId(\"5fdc7cffa299044555757034\")",
+    "Name": "Eclipse",
+    "Manufacturer": "Aegis Dynamics",
+    "Role": [
+      "StealthBomber"
+    ],
+    "Size": "Medium",
+    "FlightReady": true,
+    "PledgePrice": 300
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d00a299044555757035\")",
+    "Name": "Endeavor",
+    "Manufacturer": "Musashi Industrial and Starflight Concern",
+    "Role": [
+      "HeavyScience"
+    ],
+    "Size": "Capital",
+    "FlightReady": false,
+    "PledgePrice": 350
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d00a299044555757036\")",
+    "Name": "F7C Hornet",
+    "Manufacturer": "Anvil Aerospace",
+    "Role": [
+      "Mediumfighter"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 110
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d00a299044555757037\")",
+    "Name": "F7C-M Super Hornet",
+    "Manufacturer": "Anvil Aerospace",
+    "Role": [
+      "MediumFighter"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 180
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d00a299044555757038\")",
+    "Name": "F7C-R Hornet Tracker",
+    "Manufacturer": "Anvil Aerospace",
+    "Role": [
+      "Pathfinder"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 140
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d01a299044555757039\")",
+    "Name": "F7C-S Hornet Ghost",
+    "Manufacturer": "Anvil Aerospace",
+    "Role": [
+      "StealthFighter"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 125
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d01a29904455575703a\")",
+    "Name": "Freelancer",
+    "Manufacturer": "Musashi Industrial and Starflight Concern",
+    "Role": [
+      "MediumFreight"
+    ],
+    "Size": "Medium",
+    "FlightReady": true,
+    "PledgePrice": 110
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d01a29904455575703b\")",
+    "Name": "Freelancer DUR",
+    "Manufacturer": "Musashi Industrial and Starflight Concern",
+    "Role": [
+      "Expedition"
+    ],
+    "Size": "Medium",
+    "FlightReady": true,
+    "PledgePrice": 135
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d02a29904455575703c\")",
+    "Name": "Freelancer MAX",
+    "Manufacturer": "Musashi Industrial and Starflight Concern",
+    "Role": [
+      "HeavyFreight"
+    ],
+    "Size": "Medium",
+    "FlightReady": true,
+    "PledgePrice": 150
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d02a29904455575703d\")",
+    "Name": "Freelancer MIS",
+    "Manufacturer": "Musashi Industrial and Starflight Concern",
+    "Role": [
+      "Gunship"
+    ],
+    "Size": "Medium",
+    "FlightReady": true,
+    "PledgePrice": 175
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d02a29904455575703e\")",
+    "Name": "Genesis Starliner",
+    "Manufacturer": "Crusader Industries",
+    "Role": [
+      "PassengerTransport"
+    ],
+    "Size": "Large",
+    "FlightReady": false,
+    "PledgePrice": 400
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d03a29904455575703f\")",
+    "Name": "Gladiator",
+    "Manufacturer": "Anvil Aerospace",
+    "Role": [
+      "LightBomber"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 165
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d03a299044555757040\")",
+    "Name": "Gladius",
+    "Manufacturer": "Aegis Dynamics",
+    "Role": [
+      "LightFighter"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 90
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d03a299044555757041\")",
+    "Name": "Glaive",
+    "Manufacturer": "Esperia",
+    "Role": [
+      "MediumFighter"
+    ],
+    "Size": "Medium",
+    "FlightReady": true,
+    "PledgePrice": 350
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d03a299044555757042\")",
+    "Name": "Hammerhead",
+    "Manufacturer": "Aegis Dynamics",
+    "Role": [
+      "HeavyGunShip"
+    ],
+    "Size": "Large",
+    "FlightReady": true,
+    "PledgePrice": 725
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d04a299044555757043\")",
+    "Name": "Hawk",
+    "Manufacturer": "Anvil Aerospace",
+    "Role": [
+      "LightFighter"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 100
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d04a299044555757044\")",
+    "Name": "Herald",
+    "Manufacturer": "Drake Interplanetary",
+    "Role": [
+      "MediumData"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 85
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d04a299044555757045\")",
+    "Name": "Hull A",
+    "Manufacturer": "Musashi Industrial and Starflight Concern",
+    "Role": [
+      "Cargo"
+    ],
+    "Size": "Small",
+    "FlightReady": false,
+    "PledgePrice": 60
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d05a299044555757046\")",
+    "Name": "Hull B",
+    "Manufacturer": "Musashi Industrial and Starflight Concern",
+    "Role": [
+      "HeavyFreight"
+    ],
+    "Size": "Medium",
+    "FlightReady": false,
+    "PledgePrice": 90
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d05a299044555757047\")",
+    "Name": "Hull C",
+    "Manufacturer": "Musashi Industrial and Starflight Concern",
+    "Role": [
+      "HeavyFreight"
+    ],
+    "Size": "Large",
+    "FlightReady": false,
+    "PledgePrice": 250
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d05a299044555757048\")",
+    "Name": "Hull D",
+    "Manufacturer": "Musashi Industrial and Starflight Concern",
+    "Role": [
+      "Transport"
+    ],
+    "Size": "Capital",
+    "FlightReady": false,
+    "PledgePrice": 350
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d06a299044555757049\")",
+    "Name": "Hull E",
+    "Manufacturer": "Musashi Industrial and Starflight Concern",
+    "Role": [
+      "Transport"
+    ],
+    "Size": "Capital",
+    "FlightReady": false,
+    "PledgePrice": 650
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d06a29904455575704a\")",
+    "Name": "Hurricane",
+    "Manufacturer": "Anvil Aerospace",
+    "Role": [
+      "HeavyFighter"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 195
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d06a29904455575704b\")",
+    "Name": "Idris-K",
+    "Manufacturer": "Aegis Dynamics",
+    "Role": [
+      "Frigate"
+    ],
+    "Size": "Capital",
+    "FlightReady": false,
+    "PledgePrice": 1800
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d07a29904455575704c\")",
+    "Name": "Idris-P",
+    "Manufacturer": "Aegis Dynamics",
+    "Role": [
+      "Frigate"
+    ],
+    "Size": "Capital",
+    "FlightReady": false,
+    "PledgePrice": 1500
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d07a29904455575704d\")",
+    "Name": "Khartu-al",
+    "Manufacturer": "Aopoa",
+    "Role": [
+      "LightFighter"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 170
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d07a29904455575704e\")",
+    "Name": "Kraken",
+    "Manufacturer": "Drake Interplanetary",
+    "Role": [
+      "Support"
+    ],
+    "Size": "Capital",
+    "FlightReady": false,
+    "PledgePrice": 1650
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d07a29904455575704f\")",
+    "Name": "Kraken Privateer",
+    "Manufacturer": "Drake Interplanetary",
+    "Role": [
+      "Multi-role,lightcarrier"
+    ],
+    "Size": "Capital",
+    "FlightReady": false,
+    "PledgePrice": 2000
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d08a299044555757050\")",
+    "Name": "M2 Hercules",
+    "Manufacturer": "Crusader Industries",
+    "Role": [
+      "HeavyMilitaryLifting"
+    ],
+    "Size": "Large",
+    "FlightReady": false,
+    "PledgePrice": 480
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d08a299044555757051\")",
+    "Name": "M50",
+    "Manufacturer": "Origin Jumpworks",
+    "Role": [
+      "Racing",
+      "Interdiction"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 100
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d08a299044555757052\")",
+    "Name": "MOLE",
+    "Manufacturer": "Argo Astronautics",
+    "Role": [
+      "Mining"
+    ],
+    "Size": "Medium",
+    "FlightReady": true,
+    "PledgePrice": 315
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d09a299044555757053\")",
+    "Name": "MPUV-1C",
+    "Manufacturer": "Argo Astronautics",
+    "Role": [
+      "LightFreight"
+    ],
+    "Size": "Snub",
+    "FlightReady": true,
+    "PledgePrice": 35
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d09a299044555757054\")",
+    "Name": "MPUV-1P",
+    "Manufacturer": "Argo Astronautics",
+    "Role": [
+      "Passenger"
+    ],
+    "Size": "Snub",
+    "FlightReady": true,
+    "PledgePrice": 40
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d09a299044555757055\")",
+    "Name": "Mantis",
+    "Manufacturer": "Roberts Space Industries",
+    "Role": [
+      "Interdiction"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 150
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d0aa299044555757056\")",
+    "Name": "Merchantman",
+    "Manufacturer": "Banu Souli",
+    "Role": [
+      "HeavyFreight"
+    ],
+    "Size": "Large",
+    "FlightReady": false,
+    "PledgePrice": 450
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d0aa299044555757057\")",
+    "Name": "Mustang Alpha",
+    "Manufacturer": "Consolidated Outland",
+    "Role": [
+      "LightFreight"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 30
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d0ba299044555757058\")",
+    "Name": "Mustang Beta",
+    "Manufacturer": "Consolidated Outland",
+    "Role": [
+      "Pathfinder"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 40
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d0ba299044555757059\")",
+    "Name": "Mustang Delta",
+    "Manufacturer": "Consolidated Outland",
+    "Role": [
+      "LightFighter"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 65
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d0ba29904455575705a\")",
+    "Name": "Mustang Gamma",
+    "Manufacturer": "Consolidated Outland",
+    "Role": [
+      "Racing"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 55
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d0ba29904455575705b\")",
+    "Name": "Nautilus",
+    "Manufacturer": "Aegis Dynamics",
+    "Role": [
+      "Minelayer"
+    ],
+    "Size": "Large",
+    "FlightReady": false,
+    "PledgePrice": 725
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d0ca29904455575705c\")",
+    "Name": "Nomad",
+    "Manufacturer": "Consolidated Outland",
+    "Role": [
+      "Lightfreight"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 80
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d0ca29904455575705d\")",
+    "Name": "Nox",
+    "Manufacturer": "Aopoa",
+    "Role": [
+      "Racing"
+    ],
+    "Size": "Snub",
+    "FlightReady": true,
+    "PledgePrice": 45
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d0ca29904455575705e\")",
+    "Name": "Orion",
+    "Manufacturer": "Roberts Space Industries",
+    "Role": [
+      "Mining"
+    ],
+    "Size": "Capital",
+    "FlightReady": false,
+    "PledgePrice": 575
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d0da29904455575705f\")",
+    "Name": "P-52 Merlin",
+    "Manufacturer": "Kruger Intergalactic",
+    "Role": [
+      "SnubFighter"
+    ],
+    "Size": "Snub",
+    "FlightReady": true,
+    "PledgePrice": 25
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d0da299044555757060\")",
+    "Name": "P-72 Archimedes",
+    "Manufacturer": "Kruger Intergalactic",
+    "Role": [
+      "Racing"
+    ],
+    "Size": "Snub",
+    "FlightReady": true,
+    "PledgePrice": 35
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d0da299044555757061\")",
+    "Name": "Perseus",
+    "Manufacturer": "Roberts Space Industries",
+    "Role": [
+      "Gunship"
+    ],
+    "Size": "Large",
+    "FlightReady": false,
+    "PledgePrice": 675
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d0ea299044555757062\")",
+    "Name": "Pioneer",
+    "Manufacturer": "Consolidated Outland",
+    "Role": [
+      "HeavyConstruction"
+    ],
+    "Size": "Capital",
+    "FlightReady": false,
+    "PledgePrice": 850
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d0ea299044555757063\")",
+    "Name": "Polaris",
+    "Manufacturer": "Roberts Space Industries",
+    "Role": [
+      "Corvette"
+    ],
+    "Size": "Capital",
+    "FlightReady": false,
+    "PledgePrice": 750
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d0ea299044555757064\")",
+    "Name": "Prospector",
+    "Manufacturer": "Musashi Industrial and Starflight Concern",
+    "Role": [
+      "Mining"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 155
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d0fa299044555757065\")",
+    "Name": "Prowler",
+    "Manufacturer": "Esperia",
+    "Role": [
+      "Dropship"
+    ],
+    "Size": "Medium",
+    "FlightReady": true,
+    "PledgePrice": 440
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d0fa299044555757066\")",
+    "Name": "Razor",
+    "Manufacturer": "Musashi Industrial and Starflight Concern",
+    "Role": [
+      "Racing"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 145
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d0fa299044555757067\")",
+    "Name": "Razor EX",
+    "Manufacturer": "Musashi Industrial and Starflight Concern",
+    "Role": [
+      "Stealth"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 155
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d0fa299044555757068\")",
+    "Name": "Razor LX",
+    "Manufacturer": "Musashi Industrial and Starflight Concern",
+    "Role": [
+      "Racing"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 150
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d10a299044555757069\")",
+    "Name": "Reclaimer",
+    "Manufacturer": "Aegis Dynamics",
+    "Role": [
+      "HeavySalvage"
+    ],
+    "Size": "Large",
+    "FlightReady": true,
+    "PledgePrice": 400
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d10a29904455575706a\")",
+    "Name": "Reliant Kore",
+    "Manufacturer": "Musashi Industrial and Starflight Concern",
+    "Role": [
+      "LightFreight"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 65
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d10a29904455575706b\")",
+    "Name": "Reliant Mako",
+    "Manufacturer": "Musashi Industrial and Starflight Concern",
+    "Role": [
+      "Reporting"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 95
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d11a29904455575706c\")",
+    "Name": "Reliant Sen",
+    "Manufacturer": "Musashi Industrial and Starflight Concern",
+    "Role": [
+      "LightScience"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 85
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d11a29904455575706d\")",
+    "Name": "Reliant Tana",
+    "Manufacturer": "Musashi Industrial and Starflight Concern",
+    "Role": [
+      "LightFighter"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 75
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d11a29904455575706e\")",
+    "Name": "Retaliator Base",
+    "Manufacturer": "Aegis Dynamics",
+    "Role": [
+      "HeavyBomber"
+    ],
+    "Size": "Large",
+    "FlightReady": false,
+    "PledgePrice": 150
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d12a29904455575706f\")",
+    "Name": "Retaliator Bomber",
+    "Manufacturer": "Aegis Dynamics",
+    "Role": [
+      "HeavyBomber"
+    ],
+    "Size": "Large",
+    "FlightReady": true,
+    "PledgePrice": 275
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d12a299044555757070\")",
+    "Name": "SRV",
+    "Manufacturer": "Argo Astronautics",
+    "Role": [
+      "Tugging"
+    ],
+    "Size": "Small",
+    "FlightReady": false,
+    "PledgePrice": 150
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d12a299044555757071\")",
+    "Name": "Sabre",
+    "Manufacturer": "Aegis Dynamics",
+    "Role": [
+      "StealthFighter"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 170
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d13a299044555757072\")",
+    "Name": "San'tok.yāi",
+    "Manufacturer": "Aopoa",
+    "Role": [
+      "MediumFighter"
+    ],
+    "Size": "Small",
+    "FlightReady": false,
+    "PledgePrice": 220
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d13a299044555757073\")",
+    "Name": "Scythe",
+    "Manufacturer": "Vanduul Clans",
+    "Role": [
+      "MediumFighter"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 300
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d13a299044555757074\")",
+    "Name": "Starfarer",
+    "Manufacturer": "Musashi Industrial and Starflight Concern",
+    "Role": [
+      "HeavyRefueling"
+    ],
+    "Size": "Large",
+    "FlightReady": true,
+    "PledgePrice": 300
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d13a299044555757075\")",
+    "Name": "Starfarer Gemini",
+    "Manufacturer": "Musashi Industrial and Starflight Concern",
+    "Role": [
+      "HeavyRefueling"
+    ],
+    "Size": "Large",
+    "FlightReady": true,
+    "PledgePrice": 340
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d14a299044555757076\")",
+    "Name": "Talon",
+    "Manufacturer": "Esperia",
+    "Role": [
+      "Lightfighter"
+    ],
+    "Size": "Small",
+    "FlightReady": false,
+    "PledgePrice": 115
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d14a299044555757077\")",
+    "Name": "Talon Shrike",
+    "Manufacturer": "Esperia",
+    "Role": [
+      "Lightfighter"
+    ],
+    "Size": "Small",
+    "FlightReady": false,
+    "PledgePrice": 115
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d14a299044555757078\")",
+    "Name": "Terrapin",
+    "Manufacturer": "Anvil Aerospace",
+    "Role": [
+      "Scout"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 220
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d15a299044555757079\")",
+    "Name": "Valkyrie",
+    "Manufacturer": "Anvil Aerospace",
+    "Role": [
+      "HeavyDropship"
+    ],
+    "Size": "Medium",
+    "FlightReady": true,
+    "PledgePrice": 375
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d15a29904455575707a\")",
+    "Name": "Vanguard Harbinger",
+    "Manufacturer": "Aegis Dynamics",
+    "Role": [
+      "Bomber"
+    ],
+    "Size": "Medium",
+    "FlightReady": true,
+    "PledgePrice": 290
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d15a29904455575707b\")",
+    "Name": "Vanguard Hoplite",
+    "Manufacturer": "Aegis Dynamics",
+    "Role": [
+      "Dropship"
+    ],
+    "Size": "Medium",
+    "FlightReady": true,
+    "PledgePrice": 235
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d16a29904455575707c\")",
+    "Name": "Vanguard Sentinel",
+    "Manufacturer": "Aegis Dynamics",
+    "Role": [
+      "ElectronicWarfare"
+    ],
+    "Size": "Medium",
+    "FlightReady": true,
+    "PledgePrice": 275
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d16a29904455575707d\")",
+    "Name": "Vanguard Warden",
+    "Manufacturer": "Aegis Dynamics",
+    "Role": [
+      "HeavyFighter"
+    ],
+    "Size": "Medium",
+    "FlightReady": true,
+    "PledgePrice": 260
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d16a29904455575707e\")",
+    "Name": "Vulcan",
+    "Manufacturer": "Aegis Dynamics",
+    "Role": [
+      "MediumRepair",
+      "MediumRefuel"
+    ],
+    "Size": "Medium",
+    "FlightReady": false,
+    "PledgePrice": 200
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d17a29904455575707f\")",
+    "Name": "Vulture",
+    "Manufacturer": "Drake Interplanetary",
+    "Role": [
+      "Salvage"
+    ],
+    "Size": "Small",
+    "FlightReady": false,
+    "PledgePrice": 140
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d17a299044555757080\")",
+    "Name": "X1",
+    "Manufacturer": "Origin Jumpworks",
+    "Role": [
+      "Touring"
+    ],
+    "Size": "Snub",
+    "FlightReady": false,
+    "PledgePrice": 40
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d17a299044555757081\")",
+    "Name": "X1 Force",
+    "Manufacturer": "Origin Jumpworks",
+    "Role": [
+      "Pathfinder"
+    ],
+    "Size": "Snub",
+    "FlightReady": false,
+    "PledgePrice": 50
+  },
+  {
+    "_id": "ObjectId(\"5fdc7d17a299044555757082\")",
+    "Name": "X1 Velocity",
+    "Manufacturer": "Origin Jumpworks",
+    "Role": [
+      "Racing"
+    ],
+    "Size": "Snub",
+    "FlightReady": false,
+    "PledgePrice": 45
+  }
 ]
