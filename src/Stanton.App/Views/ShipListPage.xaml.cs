@@ -18,9 +18,9 @@ namespace Stanton.App.Views
             Loaded += ShipListPage_Loaded;
         }
 
-        private void ShipListPage_Loaded(object sender, RoutedEventArgs e)
+        private async void ShipListPage_Loaded(object sender, RoutedEventArgs e)
         {
-            ViewModel.LoadData();
+            await ViewModel.LoadDataAsync();
         }
 
         private void collection_SelectionChanged(object sender, SelectionChangedEventArgs e)
