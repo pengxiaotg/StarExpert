@@ -5,7 +5,8 @@
     xmlns:local="using:Stanton.App.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:cts ="using:Microsoft.Toolkit.Uwp.UI.Controls" 
+    xmlns:cts ="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    xmlns:animations="using:Microsoft.Toolkit.Uwp.UI.Animations"
     xmlns:model="using:Stanton.App.Model"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -13,7 +14,8 @@
     <Grid Margin="24,0,0,24">
         <GridView x:Name="collection" 
                   ItemsSource="{x:Bind ViewModel.Source, Mode=TwoWay}"
-                  SelectionChanged="collection_SelectionChanged">
+                  SelectionChanged="collection_SelectionChanged"
+                  animations:ReorderGridAnimation.Duration="250">
             <GridView.Header>
                 <cts:ScrollHeader Mode="QuickReturn">
                     <!-- Menu Bar Start -->
