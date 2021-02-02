@@ -1,5 +1,9 @@
-﻿using Stanton.Common.Entity;
+﻿using System.IO;
+using Stanton.Common.Entity;
 using Stanton.App.Helpers;
+using Windows.Storage;
+using System.Threading.Tasks;
+using System;
 
 namespace Stanton.App.Model
 {
@@ -12,8 +16,7 @@ namespace Stanton.App.Model
 
         public string PreviewImageSource
         {
-            //get => $"ms-appx:///Assets/images/ship/{Name}/1.jpeg";
-            get => $"ms-appx:///Assets/images/ship/Mercury Star Runner/1.jpeg";
+            get => $"ms-appx:///Assets/images/ship/{Name}/1.jpeg";
         }
 
         public string PriceText
