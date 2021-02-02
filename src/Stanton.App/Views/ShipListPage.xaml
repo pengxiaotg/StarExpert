@@ -72,7 +72,10 @@
                                 Background="{ThemeResource SystemListLowColor}">
                         <Grid>
                             <!-- Previe Image -->
-                            <Image Source="{x:Bind PreviewImageSource}" Stretch="Fill"/>
+                            <Image Source="{x:Bind PreviewImageSource}" 
+                                   Height="225"
+                                   Width="400" 
+                                   Stretch="UniformToFill"/>
                             <!-- Flyable Icon -->
                             <cts:DropShadowPanel Visibility="{x:Bind FlightReady}">
                                 <PathIcon Data="{StaticResource FlightReadyIcon}" 

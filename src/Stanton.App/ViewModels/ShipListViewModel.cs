@@ -22,6 +22,7 @@ namespace Stanton.App.ViewModels
             foreach (var ship in data)
             {
                 var shipItem = mapper.Map<ShipItem>(ship);
+                //shipItem.PreviewImageSource = await shipItem.GetPreviewImageSource();
                 Source.Add(shipItem);
                 // just magic
                 if (i >= 20)
