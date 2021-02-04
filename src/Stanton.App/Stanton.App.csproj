@@ -310,6 +310,12 @@
     <Content Include="Assets\images\ship\Anvil Ballista Snowblind\4.jpeg" />
     <Content Include="Assets\images\ship\Anvil Ballista Snowblind\5.jpeg" />
     <Content Include="Assets\images\ship\Anvil Ballista Snowblind\6.jpeg" />
+    <Content Include="Assets\images\ship\Anvil Ballista\1.jpeg" />
+    <Content Include="Assets\images\ship\Anvil Ballista\2.jpeg" />
+    <Content Include="Assets\images\ship\Anvil Ballista\3.jpeg" />
+    <Content Include="Assets\images\ship\Anvil Ballista\4.jpeg" />
+    <Content Include="Assets\images\ship\Anvil Ballista\5.jpeg" />
+    <Content Include="Assets\images\ship\Anvil Ballista\6.jpeg" />
     <Content Include="Assets\images\ship\Apollo Medivac\1.jpeg" />
     <Content Include="Assets\images\ship\Apollo Medivac\2.jpeg" />
     <Content Include="Assets\images\ship\Apollo Medivac\3.jpeg" />
@@ -473,6 +479,10 @@
     <Content Include="Assets\images\ship\C8 Pisces\1.jpeg" />
     <Content Include="Assets\images\ship\C8 Pisces\2.jpeg" />
     <Content Include="Assets\images\ship\C8 Pisces\3.jpeg" />
+    <Content Include="Assets\images\ship\C8X Pisces Expedition\1.jpeg" />
+    <Content Include="Assets\images\ship\C8X Pisces Expedition\2.jpeg" />
+    <Content Include="Assets\images\ship\C8X Pisces Expedition\3.jpeg" />
+    <Content Include="Assets\images\ship\C8X Pisces Expedition\4.jpeg" />
     <Content Include="Assets\images\ship\Carrack Expedition w\C8X\1.jpeg" />
     <Content Include="Assets\images\ship\Carrack Expedition w\C8X\10.jpeg" />
     <Content Include="Assets\images\ship\Carrack Expedition w\C8X\11.jpeg" />
@@ -601,6 +611,10 @@
     <Content Include="Assets\images\ship\Crucible\7.jpeg" />
     <Content Include="Assets\images\ship\Crucible\8.jpeg" />
     <Content Include="Assets\images\ship\Crucible\9.jpeg" />
+    <Content Include="Assets\images\ship\Crusader Ares Inferno\1.jpeg" />
+    <Content Include="Assets\images\ship\Crusader Ares Inferno\2.jpeg" />
+    <Content Include="Assets\images\ship\Crusader Ares Inferno\3.jpeg" />
+    <Content Include="Assets\images\ship\Crusader Ares Inferno\4.jpeg" />
     <Content Include="Assets\images\ship\Crusader Ares Ion\1.jpeg" />
     <Content Include="Assets\images\ship\Crusader Ares Ion\2.jpeg" />
     <Content Include="Assets\images\ship\Crusader Ares Ion\3.jpeg" />
@@ -1513,12 +1527,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Assets\images\ship\Anvil Ballista\" />
-    <Folder Include="Assets\images\ship\C8X Pisces Expedition\" />
     <Folder Include="Assets\images\ship\Caterpillar Best In Show Edition\" />
     <Folder Include="Assets\images\ship\Caterpillar Pirate Edition\" />
     <Folder Include="Assets\images\ship\Constellation Phoenix Emerald\" />
-    <Folder Include="Assets\images\ship\Crusader Ares Inferno\" />
     <Folder Include="Assets\images\ship\Cutlass Black Best In Show Edition\" />
     <Folder Include="Assets\images\ship\F7A Hornet\" />
     <Folder Include="Assets\images\ship\Gladius Valiant\" />
@@ -1535,6 +1546,7 @@
     <Folder Include="Assets\images\ship\Reclaimer Best In Show Edition\" />
     <Folder Include="Assets\images\ship\Sabre Comet\" />
     <Folder Include="Assets\images\ship\Valkyrie Liberator Edition\" />
+    <Folder Include="Assets\images\ship\Valkyrie\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
