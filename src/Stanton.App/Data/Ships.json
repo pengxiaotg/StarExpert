@@ -534,7 +534,7 @@
   },
   {
     "_id": "ObjectId(\"5fdc7cffa299044555757032\")",
-    "Name": "Defender",
+    "Name": "Banu Defender",
     "Manufacturer": "Banu Souli",
     "Role": [
       "LightFighter"
@@ -545,7 +545,18 @@
   },
   {
     "_id": "ObjectId(\"5fdc7cffa299044555757033\")",
-    "Name": "Dragonfly",
+    "Name": "Dragonfly Black",
+    "Manufacturer": "Drake Interplanetary",
+    "Role": [
+      "Racing"
+    ],
+    "Size": "Snub",
+    "FlightReady": true,
+    "PledgePrice": 40
+  },
+  {
+    "_id": "ObjectId(\"5fdc7cffa299044555757033\")",
+    "Name": "Dragonfly Yellowjacket",
     "Manufacturer": "Drake Interplanetary",
     "Role": [
       "Racing"
@@ -809,7 +820,7 @@
   },
   {
     "_id": "ObjectId(\"5fdc7d06a29904455575704b\")",
-    "Name": "Idris-K",
+    "Name": "Idris-M",
     "Manufacturer": "Aegis Dynamics",
     "Role": [
       "Frigate"
@@ -887,7 +898,7 @@
   },
   {
     "_id": "ObjectId(\"5fdc7d08a299044555757052\")",
-    "Name": "MOLE",
+    "Name": "Argo Mole",
     "Manufacturer": "Argo Astronautics",
     "Role": [
       "Mining"
@@ -898,7 +909,7 @@
   },
   {
     "_id": "ObjectId(\"5fdc7d09a299044555757053\")",
-    "Name": "MPUV-1C",
+    "Name": "MPUV Cargo",
     "Manufacturer": "Argo Astronautics",
     "Role": [
       "LightFreight"
@@ -909,7 +920,7 @@
   },
   {
     "_id": "ObjectId(\"5fdc7d09a299044555757054\")",
-    "Name": "MPUV-1P",
+    "Name": "MPUV Personnel",
     "Manufacturer": "Argo Astronautics",
     "Role": [
       "Passenger"
@@ -985,6 +996,17 @@
     "PledgePrice": 55
   },
   {
+    "_id": "ObjectId(\"5fdc1d0ba29904455575705a\")",
+    "Name": "Mustang Omega",
+    "Manufacturer": "Consolidated Outland",
+    "Role": [
+      "Racing"
+    ],
+    "Size": "Small",
+    "FlightReady": true,
+    "PledgePrice": 55
+  },
+  {
     "_id": "ObjectId(\"5fdc7d0ba29904455575705b\")",
     "Name": "Nautilus",
     "Manufacturer": "Aegis Dynamics",
@@ -997,7 +1019,7 @@
   },
   {
     "_id": "ObjectId(\"5fdc7d0ca29904455575705c\")",
-    "Name": "Nomad",
+    "Name": "CNOU Nomad",
     "Manufacturer": "Consolidated Outland",
     "Role": [
       "Lightfreight"
@@ -1052,7 +1074,7 @@
   },
   {
     "_id": "ObjectId(\"5fdc7d0da299044555757061\")",
-    "Name": "Perseus",
+    "Name": "RSI Perseus",
     "Manufacturer": "Roberts Space Industries",
     "Role": [
       "Gunship"
@@ -1283,7 +1305,7 @@
   },
   {
     "_id": "ObjectId(\"5fdc7d14a299044555757076\")",
-    "Name": "Talon",
+    "Name": "Esperia Talon",
     "Manufacturer": "Esperia",
     "Role": [
       "Lightfighter"
@@ -1294,7 +1316,7 @@
   },
   {
     "_id": "ObjectId(\"5fdc7d14a299044555757077\")",
-    "Name": "Talon Shrike",
+    "Name": "Esperia Talon Shrike",
     "Manufacturer": "Esperia",
     "Role": [
       "Lightfighter"
@@ -1394,7 +1416,7 @@
   },
   {
     "_id": "ObjectId(\"5fdc7d17a299044555757080\")",
-    "Name": "X1",
+    "Name": "X1 Base",
     "Manufacturer": "Origin Jumpworks",
     "Role": [
       "Touring"

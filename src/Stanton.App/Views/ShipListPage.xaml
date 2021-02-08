@@ -13,7 +13,7 @@
 
     <Grid Margin="24,0,0,24">
         <GridView x:Name="collection" 
-                  ItemsSource="{x:Bind ViewModel.Source, Mode=TwoWay}"
+                  ItemsSource="{x:Bind ViewModel.ShipSource, Mode=TwoWay}"
                   SelectionChanged="collection_SelectionChanged"
                   animations:ReorderGridAnimation.Duration="250">
             <GridView.Header>
@@ -29,7 +29,9 @@
 
                         <StackPanel Orientation="Horizontal" Spacing="12" Grid.Column="0">
                             <!-- Flight Ready Filter -->
-                            <ToggleButton VerticalAlignment="Bottom" ToolTipService.ToolTip="Flight Ready">
+                            <ToggleButton VerticalAlignment="Bottom" 
+                                          ToolTipService.ToolTip="Flight Ready"
+                                          Click="FlightReadyButton_ClickAsync">
                                 <ToggleButton.Content>
                                     <Viewbox Height="36" Margin="0,0,4,0">
                                         <PathIcon Data="{StaticResource FlightReadyIcon}"/>
@@ -37,24 +39,53 @@
                                 </ToggleButton.Content>
                             </ToggleButton>
                             <!-- Manufacturer Filter -->
-                            <ComboBox PlaceholderText="All" Width="200" Header="Manufacturer">
-                                <x:String>Crusader Industries</x:String>
+                            <ComboBox PlaceholderText="All" 
+                                      Width="200" 
+                                      Header="Manufacturer"
+                                      ItemsSource="{x:Bind ViewModel.ManifactureSource, Mode=TwoWay}"
+                                      SelectionChanged="Manifacture_SelectionChanged">
+                                <ComboBox.ItemTemplate>
+                                    <DataTemplate x:DataType="model:ShipManifacturer">
+                                        <StackPanel Orientation="Horizontal" Spacing="4">
+                                            <Viewbox Height="20" VerticalAlignment="Center" HorizontalAlignment="Left">
+                                                <PathIcon Data="{x:Bind Icon}"/>
+                                            </Viewbox>
+                                            <TextBlock Text="{x:Bind Name}"
+                                                       VerticalAlignment="Center"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ComboBox.ItemTemplate>
                             </ComboBox>
                             <!-- Size Filter -->
-                            <ComboBox PlaceholderText="All" Width="120" Header="Size">
-                                <x:String>Large</x:String>
-                                <x:String>Meduim</x:String>
+                            <ComboBox PlaceholderText="All" 
+                                      Width="120" 
+                                      Header="Size"
+                                      SelectionChanged="Size_SelectionChanged">
+                                <x:String>All</x:String>
+                                <x:String>Snub</x:String>
                                 <x:String>Small</x:String>
+                                <x:String>Medium</x:String>
+                                <x:String>Large</x:String>
+                                <x:String>Capital</x:String>
                             </ComboBox>
                             <!-- Sorter -->
-                            <ComboBox PlaceholderText="Name" Header="Sort">
+                            <ComboBox PlaceholderText="Default" Header="Sort"
+                                      SelectionChanged="Sorter_SelectionChanged">
                                 <x:String>Name</x:String>
+                                <x:String>Size</x:String>
                                 <x:String>Price</x:String>
                             </ComboBox>
                         </StackPanel>
-
+                        <!-- Search Box -->
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Column="2">
-                            <AutoSuggestBox MinWidth="100" Width="200" PlaceholderText="Search ship" QueryIcon="Find" VerticalAlignment="Bottom"/>
+                            <AutoSuggestBox MinWidth="100" 
+                                            Width="200" 
+                                            PlaceholderText="Search ship"
+                                            VerticalAlignment="Bottom"
+                                            QuerySubmitted="AutoSuggestBox_QuerySubmitted"
+                                            TextChanged="AutoSuggestBox_TextChanged"
+                                            QueryIcon="Find"
+                                            ItemsSource="{x:Bind ViewModel.AutoSuggestionSource, Mode=TwoWay}"/>
                         </StackPanel>
                     </Grid>
                 </cts:ScrollHeader>
