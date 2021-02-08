@@ -84,6 +84,7 @@
                                             VerticalAlignment="Bottom"
                                             QuerySubmitted="AutoSuggestBox_QuerySubmitted"
                                             TextChanged="AutoSuggestBox_TextChanged"
+                                            QueryIcon="Find"
                                             ItemsSource="{x:Bind ViewModel.AutoSuggestionSource, Mode=TwoWay}"/>
                         </StackPanel>
                     </Grid>

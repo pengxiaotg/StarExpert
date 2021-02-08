@@ -48,9 +48,9 @@ namespace Stanton.App.ViewModels
                 ships = ships.OrderBy(x => ShipSizeManager.GetSizeSocre(x.Size));
             else if (filter.Sort == "Price")
                 ships = ships.OrderBy(x => x.PledgePrice);
-            if (filter.SearchText != string.Empty)
+            if (filter.SearchText != null && filter.SearchText != string.Empty)
                 ships = ships.Where(x => x.Name.Contains(filter.SearchText, StringComparison.OrdinalIgnoreCase));
-            await SetSource(ships);
+            await SetSource(ships.ToList());
         }
 
         public void UpdateAutoSuggestionSource(string searchText)
