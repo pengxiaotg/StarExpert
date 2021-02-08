@@ -125,6 +125,7 @@
     <Compile Include="Helpers\ResourceExtentions.cs" />
     <Compile Include="Helpers\SettingsStorageExtentions.cs" />
     <Compile Include="Model\ShipItem.cs" />
+    <Compile Include="Model\ShipManifacturer.cs" />
     <Compile Include="Services\DataLoadService.cs" />
     <Compile Include="Services\LogService.cs" />
     <Compile Include="Services\ThemeSelectorService.cs" />
