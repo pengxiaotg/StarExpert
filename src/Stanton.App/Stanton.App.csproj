@@ -428,7 +428,6 @@
     <Folder Include="Assets\images\ship\Origin G12a\" />
     <Folder Include="Assets\images\ship\Origin G12r\" />
     <Folder Include="Assets\images\ship\Origin G12\" />
-    <Folder Include="Assets\images\ship\Sabre Comet\" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
